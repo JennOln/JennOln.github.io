@@ -1,10 +1,10 @@
 .resolucion {
-    max-width:  2560px; /* Ancho de la invitacion */
-    max-width: 1080px; /* Altura de la invitacion */
+    width: 99%;
     justify-content: center;
     text-align: center;
     align-items: center; 
 }
+
 
 body {
     background-color:rgb(254, 254, 255);
@@ -196,7 +196,7 @@ h4{
 
 
 /** CONTADOR  **/
-.container1 {
+.container__counter {
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -237,7 +237,7 @@ h5 {
     place-items: center;
     height: 80px;
     width: 80px;
-    background-image: url('hobbitown.png');
+    background-image: url('/resources/hobbitown.png');
     background-size: cover;
     background-position: center;
     margin-bottom: -110px;
@@ -321,7 +321,7 @@ span{
     width: 100%;
 }
 .contenedorVestimenta img{
-    opacity: 0.6;
+    opacity: 0.3;
     border-radius: 15px;
 }
 .codigoVestimenta{
@@ -406,6 +406,12 @@ span{
     margin: 3px;
     opacity: 1;
 }
+
+.weddingDress img{
+    text-align: center;
+    width: auto;
+    opacity: 1;
+}
 /*SLIDER DEL LUGAR*/
 .slider-container {
     position: relative;
@@ -444,9 +450,19 @@ span{
     left: 50%;
 }
 
-.slide .item:nth-child(3) {
+.slide .item:nth-child(3)  {
+    left: 60%;
+}
+
+.slide .item:nth-child(4)  {
+    left: 70%;
+}
+
+.slide .item:nth-child(5) {
     left: 80%;
 }
+
+
 
 #nombreLugar #lugar{
     color:white;
@@ -526,6 +542,11 @@ span{
 }
 
 /** BOTON DE MESA DE REGALOS **/
+.mesaRegalos{
+    padding: 1rem 0.5rem 0.5rem 1rem;
+    text-align: center;
+}
+
 #mesa{
     text-align: center;
     padding-top: 2rem;
@@ -548,7 +569,7 @@ span{
 }
 
 #hospedaje:hover{
-    background-image: url('hobbit.png');
+    background-image: url('./resources/hobbit.png');
 }
 
 #hospedaje{
@@ -567,13 +588,15 @@ span{
 }
 
 /*FORMULARIO*/
-#tableform{
+.confirmar{
+    display: flex;
+    justify-content: center;
     align-items: center;
+    flex-direction: column;
+    text-align: center;
 }
 
-#form{
-    text-align: center; 
-}
+
 
 #sent {
     font-family: inherit;
@@ -638,6 +661,10 @@ span{
     margin-right: 5px;
     transform: rotate(45deg);
 } 
+
+.sugerenciasHospedaje{
+    text-align: center;
+}
 
 /** BOTONES **/
 button{
