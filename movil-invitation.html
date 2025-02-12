@@ -25,13 +25,13 @@
     <div class="resolucion">
         <div class="Encabezado">
             <audio controls autoplay>
-                <source src="Soldier, Poet, King.mp3" type="audio/mpeg"> 
+                <source src="Concerning Hobbits.mp3" type="audio/mpeg"> 
                 Tu navegador no soporta la reproducción de <audio src=""></audio>
             </audio>
             <div class="evento" id="nuestraBoda"><h2>Nuestra Boda</h2></div>
             <div class="titulo" id="titulo">
                 <!--<h1>Novia<br>&<br>Novio</h1>-->
-                <h1>Novia<br>&<br>Novio</h1>
+                <h1>Jennifer<br>&<br>Jorge Luis</h1>
             </div>
         </div>
         <p id="frase">"Preferiría vivir una vida contigo que pasar el resto de las edades sin ti"
@@ -88,11 +88,11 @@
         </div>
         <div class="fecha">
             <h2 id="subtitulo">Save The Date</h2>
-            <h3>25·10·2026</h3>
+            <h3>dd·mm·aa</h3>
         </div>
-        <section class="container1">
+        <section class="container__counter">
+            <h3>¡Estamos contando los días!</h3>
             <div id="contador">
-                <h3>¡Estamos contando los días!</h3>
                 <div class="unidad">
                     <h5 id="dias">00</h5>
                     <span><h6>Días</h6></span>
@@ -111,7 +111,7 @@
                 </div>
             </div>
         </section>
-        <!--<section class="final-sms"><h6>¡HOY ES EL GRAN DÍA! 💍💖</h6></section>-->
+        <section class="final-sms"><h6>¡HOY ES EL GRAN DÍA! 💍💖</h6></section>
         <script>
             const $days = document.getElementById('dias'),
                     $horas = document.getElementById('horas'),
@@ -149,19 +149,13 @@
             }, 1000); // Asegúrate de cerrar correctamente la función setInterval
         </script>     
         <div class="NuestrosPadres">
-            <img src="mordor.jpg" alt="Imagen de fondo">
+            <img src="resources/mordor.jpg" alt="Imagen de fondo">
             <div class="nuestrosPadresTexto">
                 <h2 id="subtitulo">Nuestros Padres</h2>
                 <h3>NOVIA</h3>
-                <p>Mamá de la novia<br>Papá de la novia</p>
-                <!--
                 <p>Teresa Osuna <br>Jesús González</p>
-                -->
                 <h3>NOVIO</h3>
-                <p>Mamá del novio<br>Papá del novio</p>
-                <!--
                 <p>Guadalupe Olivera<br>Jorge Magaña</p>
-                -->
             </div>
         </div>
         <p id="frase"> "Hubiera ido contigo hasta el final, hasta el fuego de Mordor..." <br>― Aragorn</p>
@@ -179,7 +173,9 @@
                             </button>
                         </div>
                     </div>
-                    <div class="item" style="background-image: url(./Salon/img1.png);"></div>
+                    <div class="item" style="background-image: url(./Salon/img12.jpg);"></div>
+                    <div class="item" style="background-image: url(./Salon/img7.jpg);"></div>
+                    <div class="item" style="background-image: url(./Salon/img8.png);"></div>
                     <div class="item" style="background-image: url(./Salon/img3.png);"></div>
                 </div>
             </div>
@@ -192,7 +188,7 @@
         <div>
             <h2 id="subtitulo">Invitado de honor</h2>
             <div class="sparky">
-                <img src="sparky.jpg" alt="Imagen de fondo">
+                <img src="resources/sparky.jpg" alt="Imagen de fondo">
                 <div class="sparkyText">
                     <h4>Sparky</h4>
                 </div>
@@ -202,7 +198,7 @@
         </div>
         <div class="itinerario">
             <h2 id="subtitulo"> Itinerario</h2>
-            <img src="itinerario.png"/>
+            <img src="/resources/img6.png"/>
         </div>
         <div class="mesaRegalos">
             <h2 id="subtitulo">Mesa de Regalos</h2>
@@ -215,7 +211,7 @@
             </script>
         </div>
         <div class="contenedorVestimenta">
-            <img src="mazamitla.png" alt="Imagen de fondo">
+            <img src="/resources/img1.png" alt="Imagen de fondo">
             <div class="codigoVestimenta">
                 <h2 id="subtitulo">Código de Vestimenta</h2>
                 <h3>Formal</h3>
@@ -241,9 +237,13 @@
                     <img src="/kids/img3.jpg" alt="Imagen 3">
                     <img src="/kids/img4.jpg" alt="Imagen 4">
                 </div>
-                <p>La novia lleva toda la vida esperando lucir su vestido blanco, es por eso que el color blanco queda reservado</p>
+                <div class="weddingDress">
+                    <p>La novia lleva toda la vida esperando lucir su vestido blanco, es por eso que el color blanco queda reservado</p>
+                    <img src="/resources/arwenyaragorn.png" alt="Aragorn y Arwen">
+                </div>
             </div>
         </div>
+        
         <div class="confirmar">
             <h2 id="subtitulo">¡Confirma tu Asistencia!</h2>
             <form action="/formulario">
@@ -303,11 +303,11 @@
                 </script>
             </div>
             <div class="footerContainer">
-                <img src="forestfooter.png" alt="Imagen de fondo">
+                <img src="/resources/forestfooter.png" alt="Imagen de fondo">
                 <div class="piePagina">
                     <a href="#titulo"><p id="foot"><i class="fa-solid fa-house"></i> Ir al comienzo</p></a>
                     <a href="https://wa.me/3318539843"><p id="foot">¿Tienes alguna duda? ¡Contacta a la novia!  <i class="fa-brands fa-whatsapp"></i></p></i></a>                       
-                    <h2 id="piePaginaText">Boda A&A</h2> 
+                    <h2 id="piePaginaText">Boda J&JL</h2> 
                     <!--<h2 id="piePaginaText">Boda N&N</h2> -->
                 </div>
             </div>
