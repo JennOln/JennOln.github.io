@@ -130,7 +130,7 @@ h4{
 .navigation-manual {
     position: absolute;
     width: calc(100% - 20px); /* Ajusta al tamaño reducido por el padding */
-    margin-top: calc(100vh - 680px); /* Ubícalo cerca de la parte inferior */
+    margin-top: calc(100vh - 880px); /* Ubícalo cerca de la parte inferior */
     display: flex;
     justify-content: center;
     z-index: 2; /* Coloca los botones por encima de las imágenes */
