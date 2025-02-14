@@ -16,6 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Fleur+De+Leah&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cherish&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=The+Nautigal:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
     <!-- font-awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
@@ -88,7 +89,7 @@
         </div>
         <div class="fecha">
             <h2 id="subtitulo">Save The Date</h2>
-            <h3>dd·mm·aa</h3>
+            <div class="savethedate">dd·mm·aa</div>
         </div>
         <section class="container__counter">
             <h3>¡Estamos contando los días!</h3>
@@ -202,12 +203,13 @@
         </div>
         <div class="mesaRegalos">
             <h2 id="subtitulo">Mesa de Regalos</h2>
-            <button type="button" id="mesa" onclick="verMesaRegalos()"><i class="fa-solid fa-gift"></i></button>
+            <button type="button" id="mesaRegalos__boton" onclick="verMesa()">
+                <i class="fa-solid fa-gift"></i></button>
+            </button>
             <script>
-            function verMesaRegalos() {
-            // Reemplaza el enlace de la mesa de regalos
-            window.location.href = "https://www.amazon.com.mx/"; 
-            }
+                function verMesa() {
+                    window.location.href = "https://www.amazon.com.mx/";
+                }
             </script>
         </div>
         <div class="contenedorVestimenta">
@@ -243,7 +245,6 @@
                 </div>
             </div>
         </div>
-        
         <div class="confirmar">
             <h2 id="subtitulo">¡Confirma tu Asistencia!</h2>
             <form action="/formulario">
@@ -259,7 +260,7 @@
                     </tr>
                 </table>
                 <br>
-                <table>
+                <table class="tabla__botones">
                     <tr>
                         <th><button type="button" id="btn-si"><p>SÍ, asistiré</p></button></th>
                         <th><button type="button" id="btn-no"><p>NO asistiré</p></button></th>
@@ -284,31 +285,29 @@
                 </script>
             </form>
          </div>
-         <footer>
-             <div class=sugerenciasHospedaje>     
+         <div class=sugerenciasHospedaje>     
                 <h2 id="subtitulo">Sugerencias de hospedaje</h2>
                 <h3>Hospedaje 1</h3>
                 <button type="button" id="hospedaje" onclick="verHospedaje1()"><p>Reservar</p></button>
                  <script>
                     function verHospedaje1() {
-                        window.location.href = "https://www.amazon.com.mx/"; 
+                        window.location.href = "https://www.airbnb.mx/rooms/731099225429119036?check_in=2025-03-10&check_out=2025-03-12&guests=1&adults=1&s=67&unique_share_id=6ac50f9e-466b-4ab0-98d6-2b6919419881"; 
                     }
                  </script>
                     <h3>Hospedaje 2</h3>
                     <button type="button" id="hospedaje" onclick="verHospedaje2()"><p>Reservar</p></button>
                        <script>
                            function verHospedaje2() {
-                            window.location.href = "https://www.amazon.com.mx/"; 
+                            window.location.href = "https://www.airbnb.mx/rooms/731121910498191818?check_in=2025-03-10&check_out=2025-03-12&guests=1&adults=1&s=67&unique_share_id=d8d74567-d7a2-4049-8f69-0f29b0b01294"; 
                             }
                 </script>
             </div>
+         <footer>
             <div class="footerContainer">
                 <img src="/resources/forestfooter.png" alt="Imagen de fondo">
                 <div class="piePagina">
-                    <a href="#titulo"><p id="foot"><i class="fa-solid fa-house"></i> Ir al comienzo</p></a>
-                    <a href="https://wa.me/3318539843"><p id="foot">¿Tienes alguna duda? ¡Contacta a la novia!  <i class="fa-brands fa-whatsapp"></i></p></i></a>                       
-                    <h2 id="piePaginaText">Boda J&JL</h2> 
-                    <!--<h2 id="piePaginaText">Boda N&N</h2> -->
+                    <a href="#titulo"><div class="foot"><i class="fa-solid fa-house"></i> Ir al comienzo</div></a>                       
+                    <div class="piePaginaText">Boda J&JL</div> 
                 </div>
             </div>
         </footer>
