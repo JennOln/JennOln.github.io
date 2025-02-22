@@ -1,0 +1,882 @@
+
+.resolucion {
+    width: 99%;
+    justify-content: center;
+    text-align: center;
+    align-items: center; 
+}
+
+
+body {
+    background-color:rgb(254, 254, 255);
+}
+.Encabezado{
+    background-image: url('/resources/head.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    height: 1030px;
+}
+
+/** Fuentes **/
+.titulo {
+    color: rgb(85, 102, 38);
+    text-shadow: 2px 2px black;
+}
+
+#frase { 
+    color:rgb(109, 89, 64);
+    font-family: Great Vibes;
+    font-size: 28px;
+    margin-top: 250px;
+    margin-bottom: 250px;
+}
+
+h1{
+    font-family: "The Nautigal", serif;
+    font-size: 7rem;
+}
+
+#nuestraBoda{
+    margin-top: 250px; /* Elimina cualquier margen superior si lo hay */
+    color: beige;
+}
+
+#subtitulo{
+    color: rgb(77, 61, 43);
+    text-align: center;
+}
+h2{ 
+    font-family: 'Ringbearer', sans-serif;
+    font-size: 2rem;
+    
+}
+
+p {
+    font-family: Cormorant Unicase; 
+    font-size: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center;    /* Centrar verticalmente */
+    overflow: hidden;       /* Oculta contenido fuera del contenedor */
+    transform: translateY(100px);           /* Comienza fuera de la vista */
+    opacity: 0;                             /* Invisible inicialmente */
+}
+
+h3{
+    font-family: Metamorphous;
+    font-size: 1.5rem;
+    padding: 20px;
+    text-align: center;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center;    /* Centrar verticalmente */
+    overflow: hidden;       /* Oculta contenido fuera del contenedor */
+    transform: translateY(100px);           /* Comienza fuera de la vista */
+    opacity: 0;                             /* Invisible inicialmente */
+}
+h4{
+    font-family: "The Nautigal", serif;
+    text-align: center;
+    color: rgb(85, 102, 38);
+    text-shadow: 2px 2px black;
+}
+
+/** Propiedades de FOTOS  **/
+.evento .titulo .frase{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.titulo { 
+    margin-top: -100px; /* Elimina cualquier margen superior si lo hay */
+}
+
+.savethedate{
+    font-family: "UnifrakturCook", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 50px;
+}
+
+.fecha{
+    text-align: center;
+    justify-content: center;    
+}
+
+
+/** SLIDER DE SESION DE FOTOS**/
+.sliderCarrusel{
+    width: calc(100% - 20px); /* Ancho completo menos 10px de padding a cada lado */
+    height: calc(100vh - 20px); /* Altura completa menos 10px de padding arriba y abajo */
+    overflow: hidden;
+    border-radius: 1000px; /* Opcional: redondea las esquinas */
+    box-sizing: border-box; /* Asegúrate de que el padding no altere las dimensiones */
+    position: relative;
+    justify-content: center;
+}
+
+.slides input {
+    display: none;
+}
+
+.slides {
+    display: flex;
+    width: 500%; /* Suficiente para todas las imágenes */
+    height: 100%; /* Ajusta la altura al slider */
+}
+
+.slide {
+    width: 20%; /* Cada imagen ocupa 1/5 del contenedor */
+    height: 100%; /* Ajusta la altura al contenedor */
+    transition: 0.6s; /* Suaviza la transición */
+}
+
+.slide img {
+    width: 100%; /* Imagen ocupa todo el ancho */
+    height: 100%; /* Imagen ocupa toda la altura */
+    object-fit: cover; /* Ajusta la imagen recortando para mantener la proporción */
+}
+
+.navigation-manual {
+    position: absolute;
+    bottom: 50px; /* Ajustar la distancia de los botones de la parte inferior */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+}
+
+.manual-btn {
+    border: 2px solid #fff;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.4s;
+    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+}
+
+.manual-btn:hover {
+    background: #fff;
+}
+.manual-btn:not(:last-child) {
+    margin-right: 40px;
+}
+
+#radio1:checked ~ .first {
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+    margin-left: -20%;
+}
+
+#radio3:checked ~ .first {
+    margin-left: -40%;
+}
+
+#radio4:checked ~ .first {
+    margin-left: -60%;
+}
+
+.navigation-auto div {
+    border: 2px solid #fff;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 0.4s;
+}
+
+.navigation-auto div:not(:last-child) {
+    margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+    background: #fff;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2 {
+    background: #fff;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+    background: #fff;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4 {
+    background: #fff;
+}
+
+
+/** CONTADOR  **/
+.container__counter {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    box-sizing: border-box; /*Asegura que el padding y el border se incluya en el ancho y alto total del contenedor*/
+}
+
+#contador {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    flex-wrap: wrap;
+    margin: 0 auto; /*Centra totalmente el contenedor*/
+    box-sizing: border-box;
+}
+
+.unidad {
+    display: grid;
+    place-items: center;
+    padding: 2px;
+    box-sizing: border-box;
+}
+
+h6 {
+    font-family: "Fleur De Leah", serif;
+    text-align: center;
+    color: rgb(85, 102, 38);
+    font-size: 20px;
+    margin-top: 100px; 
+}
+h5 {
+    font-family: Cormorant Unicase;
+    font-size: 25px;
+    text-align: center;
+    color: beige;
+    display: grid;
+    place-items: center;
+    height: 80px;
+    width: 80px;
+    background-image: url('/resources/hobbitown.png');
+    background-size: cover;
+    background-position: center;
+    margin-bottom: -110px;
+}
+
+span{
+    display: block;
+    padding: 5px;
+    text-align: center;
+}
+
+.final-sms {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: grid;
+    place-items: center;
+    transform: translateY(-100%);
+    transition: transform 0.5s ease-in-out;
+}
+
+.final-sms h6 {
+    text-align: center;
+    font-size: 100px;
+    color: black;
+}
+.itinerario img{
+    position: relative;
+    width: 100%;
+}
+
+
+.sparky{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sparky img{    
+    border-radius: 50%;
+    height: 400px;
+    display: block;
+}
+
+.sparkyText{
+    position: absolute;
+    bottom: -30%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 7rem;
+}
+/** GALERIA DE FOTOS DE NOVIOS**/
+
+
+.NuestrosPadres{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.NuestrosPadres img{
+    width: 100%;
+    height: auto;
+    opacity: 0.3;
+    border-radius: 15px;
+}
+
+.nuestrosPadresTexto{
+    position: absolute;
+    text-align: center;
+}
+
+/*CODIGO DE VESTIMENTA*/
+.contenedorVestimenta{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+}
+
+.contenedorVestimenta img{
+    width: 100%;
+    height: 80%;
+    opacity: 0.3;
+    border-radius: 15px;
+}
+.codigoVestimenta{
+    position: absolute;
+    text-align: center;
+    padding: 5px;
+}
+/*INVITADOS*/
+.paleteInvitados{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.circle{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.paleteDamas{
+    display: grid; /* Activa el diseño de cuadrículo */
+    grid-template-columns: 100px 100px; /* 2 columnas de 150px cada una */
+    justify-content: center;
+}
+
+.color-box{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:16 px;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgb(0, 0, 0, 0.1);
+}
+.color1{
+    background-color: #919191;
+}
+.color2{
+    background-color: #C2803A;
+}
+.color3{
+    background-color: #725C3A;
+}
+.color4{
+    background-color: #7A402E;
+}
+.color5{
+    background-color: #2F4D49;
+}
+.color6{
+    background-color: #383330;
+}
+/*DAMAS*/
+.color7{
+    background-color: #2B3E34;
+}
+.color8{
+    background-color: #546A50;
+}
+.color9{
+    background-color: #7e8a6d;
+}
+.color10{
+    background-color: #3f4e40;
+}
+/*NIÑOS*/
+.kids{
+    text-align: center;
+}
+
+.kids img{
+    text-align: center;
+    display: inline-block;
+    border: 2px solid white;
+    width: 70px;
+    height: auto;
+    margin: 3px;
+    opacity: 1;
+}
+
+.weddingDress img{
+    text-align: center;
+    width: auto;
+    opacity: 1;
+}
+/*SLIDER DEL LUGAR*/
+.slider-container {
+    position: relative;
+    margin: 0 auto;
+    width: 80%;  /*ajustar al tamaño de la imagen */
+    height: 400px; /*ajustar al tamaño de la imagen */
+    background: #f9f9f9;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.slider-container .slide .item {
+    width: 100px;  /* Ancho de los recuadros*/
+    height: 400px; /*Alto de los recuadros*/
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    border-radius: 20px;
+    box-shadow: 0 30px 50px #252525;
+    background-position: 30% 30%;
+    background-size: cover;
+}
+
+.slide .item:nth-child(1) {
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.slide .item:nth-child(2)  {
+    left: 50%;
+}
+
+.slide .item:nth-child(3)  {
+    left: 60%;
+}
+
+.slide .item:nth-child(4)  {
+    left: 70%;
+}
+
+.slide .item:nth-child(5) {
+    left: 80%;
+}
+
+#nombreLugar,
+#lugar{
+    color:white;
+}
+
+.content .name {
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.content .des {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+
+.item .content{
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    width: 140px;
+    text-align: left;
+    color:  beige;
+    transform: translate(0, -50%);
+}
+
+.content .name{
+    font-size: 40 px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-shadow: 2px 2px black;
+}
+
+.content .des{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px black;
+}
+
+.content button{
+    padding: 10px 62px;
+    border:none;
+    border-radius: 15px;
+    cursor: pointer;
+    color: beige;
+    background-color: rgb(85, 102, 38);
+    border-color: rgb(85, 102, 38);
+}
+
+/** BOTON DE MESA DE REGALOS Y APP**/
+.mesaRegalos,
+.dots-memories{
+    padding: 10px;
+    text-align: center;
+}
+
+.dots-memories img{
+    position: relative;
+    width: 100%;
+}
+
+
+ #mesaRegalos__boton,
+ #app__boton{
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: rgb(163, 137, 113); /* Color del botón */
+    color: black;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+
+#mapa:hover, 
+#app__boton:hover,
+#mesaRegalos__boton:hover{
+    background-color: rgb(85, 102, 38);
+    color: white;
+    border-color: rgb(85, 102, 38);
+}
+
+#hospedaje:hover{
+    background-image: url('./resources/hobbit.png');
+}
+
+#hospedaje{
+    background-color: #7e8a6d;
+    height: 100px;
+    width: 100px;
+    justify-content: center;
+    text-shadow: 1px 1px black;
+    text-align: center;
+    border-radius: 50%;
+    border: none;
+    color: beige;
+    cursor: pointer;
+}
+
+/*FORMULARIO*/
+.confirmar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+#nombre,
+#apellido{
+    font-weight: 550;
+    font-family: "Fleur De Leah", serif;
+    font-size: 100px;
+    font-style: normal;
+    font-size: 15px;
+    border-radius: 10px;
+}
+
+.tabla__botones{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+#sent {
+    font-family: inherit;
+    font-size: 18px;
+    background: linear-gradient(to bottom, rgb(163, 137, 113) 0%,rgb(136, 110, 86) 100%);
+    color: white;
+    padding: 0.5em 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s;
+}
+
+#sent:hover{
+    transform: translateY(-3px);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+    padding: 1rem;
+    background: linear-gradient(to bottom, #775a33 0%,#82a77b 100%);
+    cursor: pointer;
+}
+
+#sent:active {
+    transform: scale(0.95);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#sent span {
+    display: block;
+    margin-left: 0.4em;
+    transition: all 0.3s;
+  }
+  #sent svg {
+    width: 18px;
+    height: 18px;
+    fill: white;
+    transition: all 0.3s;
+}
+
+#sent .svg-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin-right: 0.5em;
+    transition: all 0.3s;
+}
+
+#sent:hover .svg-wrapper {
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 54px;
+    height: 54px;
+}
+#sent:hover svg {
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+    transform: rotate(45deg);
+} 
+
+.sugerenciasHospedaje{
+    text-align: center;
+}
+
+/** BOTONES **/
+button{
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+/* Estilo del botón seleccionado */
+button.seleccionado {
+    background-color: rgb(85, 102, 38);
+    border-color: rgb(85, 102, 38);
+    color: white;
+}
+
+/** PIE DE PÁGINA**/
+#text{
+    padding: 5px 15px 15px 5px;
+    background-color: beige;
+    color: rgb(85, 102, 38);
+    border-color: beige;
+    border-radius: 10px;
+}
+
+#input {
+    padding: 3rem;
+    cursor: pointer;
+    border-radius: 15px;
+    font-size: 3rem;
+}
+
+.foot{
+    color:rgb(136, 110, 86);
+    font-size: 10px;
+    text-shadow: 1px 1px black;
+    margin: 40px 0px;
+}
+
+#prota{
+    font-family: 'Ringbearer', sans-serif;
+    color: rgb(245, 232, 220);
+    font-size: 5rem;
+}
+a:visited{
+    color:rgb(77, 61, 43);
+}
+
+a:hover{
+    color: rgb(85, 102, 38);
+}
+.footerContainer img{
+    width: 100%;
+    opacity: 0.8;
+    height: auto;
+}
+.sugerenciasHospedaje .confirmar{
+    justify-content: center;
+    align-items: center;
+}
+
+.footerContainer{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items:last baseline;
+    width: 100%;
+}
+.piePagina{
+    position: absolute;
+    text-align: center;
+}
+
+.piePaginaText{
+    font-family: 'Ringbearer', sans-serif;
+    color:#f0f0f0;
+    text-align:center;
+    text-shadow: 1px 2px black;
+    font-size: 15px;
+
+}
+   
+/* Animación de rebote */
+@keyframes bounce {
+    0% {
+        transform: translateY(-100%);
+        animation-timing-function: ease-in;
+    }
+    50% {
+        transform: translateY(20%);
+        animation-timing-function: ease-out;
+    }
+    100% {
+        transform: translateY(0);
+        animation-timing-function: ease-in;
+    }
+}
+
+/* Animación para el efecto de aparecer de abajo hacia arriba */
+@keyframes slideUp {
+    0% {
+        transform: translateY(100px); /* Inicia fuera de la vista */
+        opacity: 0;                  /* Totalmente invisible */
+    }
+    100% {
+        transform: translateY(0);    /* Vuelve a su posición normal */
+        opacity: 1;                  /* Aparece completamente */
+    }
+}
+
+/* Animación de aparición con desenfoque */
+@keyframes animateBlur {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+        filter: blur(33px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+/* Animación de arriba hacia abajo */
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Aplica la animación a los elementos */
+.titulo,
+.savethedate,
+.fecha,
+p,
+h3,
+.NuestrosPadres,
+.contenedorVestimenta, 
+h2 {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.titulo.visible,
+.savethedate.visible,
+.fecha.visible,
+p.visible,
+h3.visible,
+.NuestrosPadres.visible,
+.contenedorVestimenta.visible,
+h2.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Aplica la animación específica a los elementos seleccionados */
+.titulo.visible {
+    animation: slideDown 3s ease-out forwards;
+}
+
+.savethedate.visible,
+.fecha.visible,
+p.visible,
+h3.visible {
+    animation: slideUp 3s ease-out forwards;
+}
+
+.NuestrosPadres.visible,
+.contenedorVestimenta.visible,
+h2.visible{
+    animation: animateBlur 3s ease-out forwards;
+}
+
+/* Aplica la animación a los botones */
+#mesaRegalos__boton,
+#mapa,
+#btn-si,
+#btn-no,
+#sent,
+#hospedaje,
+#app__boton {
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+#mesaRegalos__boton.visible,
+#mapa.visible,
+#btn-si.visible,
+#btn-no.visible,
+#sent.visible,
+#hospedaje.visible,
+#app__boton.visible {
+    opacity: 1;
+    transform: translateY(0);
+    animation: bounce 3s ease-out forwards;
+}

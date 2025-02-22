@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>nombre novia y nombre novio</title>
-    <link rel="stylesheet" href="movil-invitation.css" />
+    <title>Jennifer y Jorge Luis</title>
+    <link rel="stylesheet" href="style.css" />
     <!-- FUENTES (TIPOS DE LETRA)-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,7 +25,7 @@
 <body>
     <div class="resolucion">
         <div class="Encabezado">
-            <audio controls autoplay>
+            <audio controls muted>
                 <source src="Concerning Hobbits.mp3" type="audio/mpeg"> 
                 Tu navegador no soporta la reproducción de <audio src=""></audio>
             </audio>
@@ -85,8 +85,6 @@
                 }, 5000);
             </script>
         </div>
-        <div>
-        </div>
         <div class="fecha">
             <h2 id="subtitulo">Save The Date</h2>
             <div class="savethedate">dd·mm·aa</div>
@@ -112,43 +110,7 @@
                 </div>
             </div>
         </section>
-        <section class="final-sms"><h6>¡HOY ES EL GRAN DÍA! 💍💖</h6></section>
-        <script>
-            const $days = document.getElementById('dias'),
-                    $horas = document.getElementById('horas'),
-                    $minutos = document.getElementById('minutos'),
-                    $segundos = document.getElementById('segundos'),
-                    $finalMessage = document.querySelector('.final-sms'); // Usar clase correcta
-
-                // Fecha futura
-                const countdownDate = new Date('Oct 25, 2026 00:00:00').getTime(); // Corregir la sintaxis de la fecha
-
-                let interval = setInterval(function() { // Corregir 'fuction' a 'function'
-                // Obtener fecha actual y milisegundos
-                const now = new Date().getTime();
-    
-                // Obtener la distancia entre ambas fechas
-                let distance = countdownDate - now;
-
-                // Calcular días-horas-minutos-segundos
-                let dias = Math.floor(distance / (1000 * 60 * 60 * 24));
-                let horas = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                let minutos = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                let segundos = Math.floor((distance % (1000 * 60)) / 1000);
-
-                // Escribir resultados
-                $days.innerHTML = dias;
-                $horas.innerHTML = horas;
-                $minutos.innerHTML = minutos;
-                $segundos.innerHTML = ('0' + segundos).slice(-2);
-
-                // Cuando llegue a 0
-                if (distance < 0) {
-                    clearInterval(interval);
-                    $finalMessage.style.transform = 'translateY(0)';    
-                }
-            }, 1000); // Asegúrate de cerrar correctamente la función setInterval
-        </script>     
+        <p class="final-sms">¡HOY ES EL GRAN DÍA!💍💖</p>   
         <div class="NuestrosPadres">
             <img src="resources/mordor.jpg" alt="Imagen de fondo">
             <div class="nuestrosPadresTexto">
@@ -199,7 +161,7 @@
         </div>
         <div class="itinerario">
             <h2 id="subtitulo"> Itinerario</h2>
-            <img src="/resources/img6.png"/>
+            <img src="/resources/itinerario.png" alt="Itinerario">
         </div>
         <div class="mesaRegalos">
             <h2 id="subtitulo">Mesa de Regalos</h2>
@@ -227,12 +189,12 @@
                 </div>
                 <h3>Damas de honor</h3>
                 <div class="paleteDamas">
-                    <div class="color-box color7">Forest Green</div>
-                    <div class="color-box color8">Olive Drab</div>
-                    <div class="color-box color9">Moss Green</div>
-                    <div class="color-box color10">Cyspress</div>
+                    <div class="color-box color7"><p>Forest Green</p></div>
+                    <div class="color-box color8"><p>Drab</p></div>
+                    <div class="color-box color9"><p>Moss Green</p></div>
+                    <div class="color-box color10"><p>Cyspress</p></div>
                 </div>
-                <h3>Niños: Hobbit</h3>
+                <h3>Niños: Hobbit<br>(Sugerencia)</h3>
                 <div class="kids">
                     <img src="/kids/img1.jpg" alt="Imagen 1">
                     <img src="/kids/img2.jpg" alt="Imagen 2">
@@ -245,60 +207,47 @@
                 </div>
             </div>
         </div>
+        <div class="dots-memories">
+            <img src="/resources/dots-memories.png"/>
+            <p>Descarga Dot Memories aquí:</p>
+            <button type="button" id="app__boton" onclick="verApp()">
+                <i class="fa-solid fa-download"></i></button>
+            </button>
+            <script>
+                function verApp() {
+                    window.location.href = "https://play.google.com/store/apps/details?id=social.onelife&hl=es/";
+                }
+            </script>
+        </div>
         <div class="confirmar">
             <h2 id="subtitulo">¡Confirma tu Asistencia!</h2>
-            <form action="/formulario">
+            <form id="confirmationForm">
                 <p>Favor de confirmar asistencia por persona</p>
-                <table>
-                    <tr>
-                        <td id="form"><label for="nombre"><h3>Nombre: </h3></label></td>
-                        <td id="form"><input id="text" name="nombre"/></td>
-                    </tr>
-                    <tr>
-                        <td id="form"><label for="nombre"><h3>Apellido: </h3></label></td>
-                        <td id="form"><input id="text" name="apellido"/></td>
-                    </tr>
-                </table>
-                <br>
-                <table class="tabla__botones">
-                    <tr>
-                        <th><button type="button" id="btn-si"><p>SÍ, asistiré</p></button></th>
-                        <th><button type="button" id="btn-no"><p>NO asistiré</p></button></th>
-                        <th><button id="sent" type="submit"><i class="fa-solid fa-paper-plane"></i></button></th>
-                    </tr>
-                </table>
-                <script>
-                    const botonSi = document.getElementById('btn-si');
-                    const botonNo = document.getElementById('btn-no');
-                    // Función para manejar el anclaje
-                    function seleccionarBoton(boton) {
-                        // Quita la clase "seleccionado" de ambos botones
-                        botonSi.classList.remove('seleccionado');
-                        botonNo.classList.remove('seleccionado');
-                        // Añade la clase "seleccionado" solo al botón presionado
-                        boton.classList.add('seleccionado');
-                    }
-        
-                    // Añadir eventos a los botones
-                    botonSi.addEventListener('click', () => seleccionarBoton(botonSi));
-                    botonNo.addEventListener('click', () => seleccionarBoton(botonNo));
-                </script>
+                <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu Nombre"/>
+                <input type="text" id="apellido" name="apellido" placeholder="Ingresa tu Apellido"required/>
+              <table class="tabla__botones">
+                <tr>
+                  <th><button type="button" id="btn-si"><p>SÍ, asistiré</p></button></th>
+                  <th><button type="button" id="btn-no"><p>NO asistiré</p></button></th>
+                  <th><button id="sent" type="submit"><i class="fa-solid fa-paper-plane"></i></button></th>
+                </tr>
+              </table>
             </form>
-         </div>
+          </div>          
          <div class=sugerenciasHospedaje>     
                 <h2 id="subtitulo">Sugerencias de hospedaje</h2>
                 <h3>Hospedaje 1</h3>
                 <button type="button" id="hospedaje" onclick="verHospedaje1()"><p>Reservar</p></button>
                  <script>
                     function verHospedaje1() {
-                        window.location.href = "https://www.airbnb.mx/rooms/731099225429119036?check_in=2025-03-10&check_out=2025-03-12&guests=1&adults=1&s=67&unique_share_id=6ac50f9e-466b-4ab0-98d6-2b6919419881"; 
+                        window.location.href = "https://www.airbnb.mx/rooms/731099225429119036?guests=1&adults=1&s=67&unique_share_id=6ac50f9e-466b-4ab0-98d6-2b6919419881&source_impression_id=p3_1739678406_P3Pu0GlxNBQHapjs"; 
                     }
                  </script>
                     <h3>Hospedaje 2</h3>
                     <button type="button" id="hospedaje" onclick="verHospedaje2()"><p>Reservar</p></button>
                        <script>
                            function verHospedaje2() {
-                            window.location.href = "https://www.airbnb.mx/rooms/731121910498191818?check_in=2025-03-10&check_out=2025-03-12&guests=1&adults=1&s=67&unique_share_id=d8d74567-d7a2-4049-8f69-0f29b0b01294"; 
+                            window.location.href = "https://www.airbnb.mx/rooms/731121910498191818?guests=1&adults=1&s=67&unique_share_id=d8d74567-d7a2-4049-8f69-0f29b0b01294&source_impression_id=p3_1739678443_P3XbGJuNHlBAsHQe"; 
                             }
                 </script>
             </div>
@@ -312,4 +261,5 @@
             </div>
         </footer>
     </div>
+    <script src="./main.js"></script>
 </body>

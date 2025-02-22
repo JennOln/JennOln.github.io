@@ -1,3 +1,4 @@
+
 .resolucion {
     width: 99%;
     justify-content: center;
@@ -10,6 +11,9 @@ body {
     background-color:rgb(254, 254, 255);
 }
 
+canvas{
+    filter: blur(1px);
+}
 .Encabezado{
     background-image: url('/resources/head.jpg'); 
     background-size: cover; 
@@ -48,7 +52,7 @@ h1{
 h2{ 
     font-family: 'Ringbearer', sans-serif;
     font-size: 2rem;
-    animation: animate 1s ease-in-out 0.3s 1 forwards;
+    animation: animate 0.3s ease-in-out 1s 1 forwards;
 }
 
 p {
@@ -67,8 +71,7 @@ p {
 h3{
     font-family: Metamorphous;
     font-size: 1.5rem;
-    padding: 20px ;
-    display: flex;
+    padding: 20px;
     text-align: center;
     justify-content: center; /* Centrar horizontalmente */
     align-items: center;    /* Centrar verticalmente */
@@ -79,7 +82,6 @@ h3{
 }
 h4{
     font-family: "The Nautigal", serif;
-    
     text-align: center;
     color: rgb(85, 102, 38);
     text-shadow: 2px 2px black;
@@ -106,8 +108,10 @@ h4{
 
 .fecha{
     text-align: center;
-    justify-content: center;
+    justify-content: center;    
 }
+
+
 /** SLIDER DE SESION DE FOTOS**/
 .sliderCarrusel{
     width: calc(100% - 20px); /* Ancho completo menos 10px de padding a cada lado */
@@ -115,6 +119,8 @@ h4{
     overflow: hidden;
     border-radius: 1000px; /* Opcional: redondea las esquinas */
     box-sizing: border-box; /* Asegúrate de que el padding no altere las dimensiones */
+    position: relative;
+    justify-content: center;
 }
 
 .slides input {
@@ -141,12 +147,14 @@ h4{
 
 .navigation-manual {
     position: absolute;
-    width: calc(100% - 20px); /* Ajusta al tamaño reducido por el padding */
-    margin-top: calc(100vh - 880px); /* Ubícalo cerca de la parte inferior */
+    bottom: 50px; /* Ajustar la distancia de los botones de la parte inferior */
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     justify-content: center;
-    z-index: 2; /* Coloca los botones por encima de las imágenes */
+    z-index: 1;
 }
+
 .manual-btn {
     border: 2px solid #fff;
     padding: 10px;
@@ -479,7 +487,7 @@ span{
 
 
 
-#nombreLugar #lugar{
+#nombreLugar, #lugar{
     color:white;
 }
 
@@ -487,36 +495,20 @@ span{
     font-size: 1rem;
     text-transform: uppercase;
     font-weight: bold;
-    opacity: 0;
-    animation: animate 1s ease-in-out 0.3s 1 forwards;
 }
 .content .des {
     margin-top: 10px;
     margin-bottom: 20px;
-    opacity: 0;
-    animation: animate 1s ease-in-out 0.6s 1 forwards;
 }
 
 .content button {
     size: 2rem;
-    padding: 100px 200px;
-    border: none;
+    padding: 100px 10px;
     border-radius: 15px;
     cursor: pointer;
     color: beige;
     background-color: rgb(85, 102, 38);
     border-color: rgb(85, 102, 38);
-}
-
-@keyframes animate {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 .item .content{
@@ -577,7 +569,9 @@ span{
     animation: animate 1s ease-in-out 0.6s 1 forwards;
 }
 
-#mapa:hover, #mesaRegalos__boton:hover{
+#mapa:hover, 
+#app__boton:hover,
+#mesaRegalos__boton:hover{
     background-color: rgb(85, 102, 38);
     color: white;
     border-color: rgb(85, 102, 38);
@@ -703,10 +697,11 @@ button.seleccionado {
 
 /** PIE DE PÁGINA**/
 #text{
-    padding: 1%;
+    padding: 5px 15px 15px 5px;
     background-color: beige;
     color: rgb(85, 102, 38);
     border-color: beige;
+    border-radius: 10px;
 }
 
 #input {
@@ -766,6 +761,18 @@ a:hover{
 
 }
     
+@keyframes animate {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
 /* Animación para el efecto de aparecer de abajo hacia arriba */
 @keyframes slideUp {
     0% {
@@ -781,7 +788,7 @@ a:hover{
 @keyframes animate {
     from{
         opacity: 0;
-        transform: translate(0,100ox);
+        transform: translate(0,100px);
         filter:blur(33px);
     }
 
@@ -789,5 +796,25 @@ a:hover{
         opacity: 1;
         transform: translate(0);
         filter:blur(0);
+    }
+}
+
+
+/* Animación de arriba hacia abajo */
+.titulo,
+.savethedate,
+.fecha {
+    animation: slideDown 3s ease-out forwards;
+    opacity: 0;
+}
+
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
