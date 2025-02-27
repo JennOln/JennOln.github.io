@@ -27,8 +27,8 @@ body {
     color:rgb(109, 89, 64);
     font-family: Great Vibes;
     font-size: 28px;
-    margin-top: 250px;
-    margin-bottom: 250px;
+    margin-top: 180px;
+    margin-bottom: 180px;
 }
 
 h1{
@@ -98,6 +98,7 @@ h4{
     font-weight: 700;
     font-style: normal;
     font-size: 50px;
+    margin-top: -50px;
 }
 
 .fecha{
@@ -211,9 +212,12 @@ h4{
 
 
 /** CONTADOR  **/
+.container__counter h3 {
+    margin-bottom: -65px; /* Ajusta este valor */
+}
+
 .container__counter {
     width: 100%;
-    min-height: 100vh;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -327,6 +331,10 @@ span{
 .nuestrosPadresTexto{
     position: absolute;
     text-align: center;
+}
+
+.nuestrosPadresTexto h3{
+    margin-bottom: -35px;
 }
 
 /*CODIGO DE VESTIMENTA*/
@@ -825,7 +833,10 @@ p,
 h3,
 .NuestrosPadres,
 .contenedorVestimenta, 
-h2 {
+h2,
+.itinerario img,
+.sparky img,
+#contador {
     opacity: 0;
     transform: translateY(100px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
@@ -838,7 +849,10 @@ p.visible,
 h3.visible,
 .NuestrosPadres.visible,
 .contenedorVestimenta.visible,
-h2.visible {
+h2.visible,
+.itinerario img,
+.sparky img,
+#contador.visible{
     opacity: 1;
     transform: translateY(0);
 }
@@ -857,17 +871,21 @@ h3.visible {
 
 .NuestrosPadres.visible,
 .contenedorVestimenta.visible,
-h2.visible{
+h2.visible,
+.itinerario img,
+.sparky img,
+#contador.visible{
     animation: animateBlur 3s ease-out forwards;
 }
 
-/* Aplica la animación a los botones */
+/* Aplica la animación a los botones e imagenes*/
 #mesaRegalos__boton,
 #mapa,
 #btn-si,
 #btn-no,
+#submit,
 #hospedaje,
-#app__boton {
+#app__boton{
     opacity: 0;
     transform: translateY(-100%);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
@@ -877,8 +895,9 @@ h2.visible{
 #mapa.visible,
 #btn-si.visible,
 #btn-no.visible,
+#submit.visible,
 #hospedaje.visible,
-#app__boton.visible {
+#app__boton.visible{
     opacity: 1;
     transform: translateY(0);
     animation: bounce 3s ease-out forwards;

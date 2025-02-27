@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }, { threshold: 0.1 });
 
-    document.querySelectorAll('.titulo, .savethedate, .fecha, p, h3, .NuestrosPadres, .contenedorVestimenta, h2, #mesaRegalos__boton, #mapa, #btn-si, #btn-no, #sent, #hospedaje, #app__boton').forEach(elemento => {
+    document.querySelectorAll('.titulo, .savethedate, .fecha, p, h3, .NuestrosPadres, .contenedorVestimenta, h2, #mesaRegalos__boton, #mapa, #btn-si, #btn-no, #submit, #hospedaje, #app__boton, .itinerario img, .sparky img, #contador').forEach(elemento => {
         observer.observe(elemento);
     });
 

@@ -37,92 +37,91 @@
         </div>
         <p id="frase">"Preferiría vivir una vida contigo que pasar el resto de las edades sin ti"
                 <br>― J. R. R. Tolkien</p>
-    </div>
-    <div class="sliderCarrusel">
-        <div class="slides">
-            <!-- Radio buttons for navigation -->
-            <input type="radio" name="radio-btn" id="radio1">
-            <input type="radio" name="radio-btn" id="radio2">
-            <input type="radio" name="radio-btn" id="radio3">
-            <input type="radio" name="radio-btn" id="radio4">
+        <div class="sliderCarrusel">
+            <div class="slides">
+                <!-- Radio buttons for navigation -->
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <input type="radio" name="radio-btn" id="radio4">
 
-            <!-- Slide images -->
-            <div class="slide first">
-                <img src="/sesion/img1.png" alt="Imagen 1">
-            </div>
-            <div class="slide">
-                <img src="/sesion/img2.png" alt="Imagen 2">
-            </div>
-            <div class="slide">
-                <img src="/sesion/img3.png" alt="Imagen 3">
-            </div>
-            <div class="slide">
-                <img src="/sesion/img4.png" alt="Imagen 4">
-            </div>
-
-            <!-- Automatic navigation -->
-            <div class="navigation-auto">
-                <div class="auto-btn1"></div>
-                <div class="auto-btn2"></div>
-                <div class="auto-btn3"></div>
-                <div class="auto-btn4"></div>
+                <!-- Slide images -->
+                <div class="slide first">
+                    <img src="/sesion/img1.png" alt="Imagen 1">
                 </div>
-            </div>
-    
-            <!-- Manual navigation -->
-            <div class="navigation-manual">
-                <label for="radio1" class="manual-btn"></label>
-                <label for="radio2" class="manual-btn"></label>
-                <label for="radio3" class="manual-btn"></label>
-                <label for="radio4" class="manual-btn"></label>
-            </div>
-            <script>
-                const radios = document.querySelectorAll('input[name="radio-btn"]');
-                const manualBtns = document.querySelectorAll('.manual-btn'); // Botones manuales
-                let counter = 1;
-            
-                // Cambia la imagen automáticamente cada 5 segundos
-                const changeSlide = () => {
-                    document.getElementById('radio' + counter).checked = true;
-                    updateManualButtons(counter); // Actualiza los botones manuales
-                    counter++;
-                    if (counter > 4) counter = 1;
-                };
-            
-                // Inicia la auto-navegación
-                let slideInterval = setInterval(changeSlide, 5000);
-            
-                // Función para iluminar el botón correcto
-                const updateManualButtons = (activeIndex) => {
-                    manualBtns.forEach((btn, index) => {
-                        if (index === activeIndex - 1) {
-                            btn.style.background = "#fff"; // Cambia el fondo del botón activo
-                        } else {
-                            btn.style.background = "rgba(0, 0, 0, 0.5)"; // Fondo para botones inactivos
-                        }
-                    });
-                };
-            
-                // Manejo de clics manuales (sincroniza la navegación automática)
-                radios.forEach((radio, index) => {
-                    radio.addEventListener('change', () => {
-                        clearInterval(slideInterval); // Detener la auto-navegación al hacer clic
-                        counter = index + 1; // Sincroniza el contador
+                <div class="slide">
+                    <img src="/sesion/img2.png" alt="Imagen 2">
+                </div>
+                <div class="slide">
+                    <img src="/sesion/img3.png" alt="Imagen 3">
+                </div>
+                <div class="slide">
+                    <img src="/sesion/img4.png" alt="Imagen 4">
+                </div>
+
+                <!-- Automatic navigation -->
+                <div class="navigation-auto">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                    <div class="auto-btn4"></div>
+                    </div>
+                </div>
+        
+                <!-- Manual navigation -->
+                <div class="navigation-manual">
+                    <label for="radio1" class="manual-btn"></label>
+                    <label for="radio2" class="manual-btn"></label>
+                    <label for="radio3" class="manual-btn"></label>
+                    <label for="radio4" class="manual-btn"></label>
+                </div>
+                <script>
+                    const radios = document.querySelectorAll('input[name="radio-btn"]');
+                    const manualBtns = document.querySelectorAll('.manual-btn'); // Botones manuales
+                    let counter = 1;
+                
+                    // Cambia la imagen automáticamente cada 5 segundos
+                    const changeSlide = () => {
+                        document.getElementById('radio' + counter).checked = true;
                         updateManualButtons(counter); // Actualiza los botones manuales
-                        slideInterval = setInterval(changeSlide, 5000); // Reinicia la auto-navegación
+                        counter++;
+                        if (counter > 4) counter = 1;
+                    };
+                
+                    // Inicia la auto-navegación
+                    let slideInterval = setInterval(changeSlide, 5000);
+                
+                    // Función para iluminar el botón correcto
+                    const updateManualButtons = (activeIndex) => {
+                        manualBtns.forEach((btn, index) => {
+                            if (index === activeIndex - 1) {
+                                btn.style.background = "#fff"; // Cambia el fondo del botón activo
+                            } else {
+                                btn.style.background = "rgba(0, 0, 0, 0.5)"; // Fondo para botones inactivos
+                            }
+                        });
+                    };
+                
+                    // Manejo de clics manuales (sincroniza la navegación automática)
+                    radios.forEach((radio, index) => {
+                        radio.addEventListener('change', () => {
+                            clearInterval(slideInterval); // Detener la auto-navegación al hacer clic
+                            counter = index + 1; // Sincroniza el contador
+                            updateManualButtons(counter); // Actualiza los botones manuales
+                            slideInterval = setInterval(changeSlide, 5000); // Reinicia la auto-navegación
+                        });
                     });
-                });
-            
-                // Inicializar los botones manuales
-                updateManualButtons(counter); // Asegura que el primer botón esté iluminado al cargar
-            </script>
-            
+                
+                    // Inicializar los botones manuales
+                    updateManualButtons(counter); // Asegura que el primer botón esté iluminado al cargar
+                </script>
+                
         </div>
         <div class="fecha">
             <h2 id="subtitulo">Save The Date</h2>
             <div class="savethedate">dd·mm·aa</div>
         </div>
-        <section class="container__counter">
+        <div class="container__counter">
             <h3>¡Estamos contando los días!</h3>
             <div id="contador">
                 <div class="unidad">
@@ -142,7 +141,7 @@
                     <span><h6>Segundos</h6></span>
                 </div>
             </div>
-        </section>
+        </div>
         <p class="final-sms">¡HOY ES EL GRAN DÍA!💍💖</p>   
         <div class="NuestrosPadres">
             <img src="resources/mordor.jpg" alt="Imagen de fondo">
@@ -163,7 +162,8 @@
                         <div class="content">
                             <div class="name"><p id="nombreLugar">Tierra <br> de Kha</p></div>
                             <div class="des"><p id="lugar">La Manzanilla
-                                <br> de la Paz, Jal.</p></div>
+                                <br> de la Paz, Jal.</p>
+                            </div>
                             <button type="button" id="mapa" onclick="verMapa()">
                                 <i class="fa-solid fa-map-location-dot"></i>
                             </button>
@@ -190,16 +190,16 @@
                 </div>
             </div>
             <p>Es deseo de los novios que el este presente y sea parte de este gran día tan especial, 
-                porque el ha sido parte de esta historia. Por favor, sé amable con el. </p>
+                    porque el ha sido parte de esta historia. Por favor, sé amable con el. </p>
         </div>
         <div class="itinerario">
             <h2 id="subtitulo"> Itinerario</h2>
-            <img src="/resources/itinerario.png" alt="Itinerario">
+            <img src="/resources/itinerario.png" alt="Itinerario" class='itinerario'>
         </div>
         <div class="mesaRegalos">
             <h2 id="subtitulo">Mesa de Regalos</h2>
             <button type="button" id="mesaRegalos__boton" onclick="verMesa()">
-                <i class="fa-solid fa-gift"></i></button>
+                <i class="fa-solid fa-gift"></i>
             </button>
             <script>
                 function verMesa() {
@@ -240,6 +240,22 @@
                 </div>
             </div>
         </div>
+        <div class="confirmar">
+            <h2 id="subtitulo">¡Confirma tu Asistencia!</h2>
+            <form method="post" action="" name="contact-form">
+                <p>Favor de confirmar asistencia por persona</p>
+                <input type="text" id="nombre" name="Nombre" placeholder="Ingresa tu Nombre"/>
+                <input type="text" id="apellido" name="Apellido" placeholder="Ingresa tu Apellido"required/>
+                <input type="hidden" id="asistencia" name="Asistencia" />
+                <table class="tabla__botones">
+                    <tr>
+                        <th><button type="button" id="btn-si" onclick="seleccionarAsistencia('SÍ, asistiré')"><p>SÍ, asistiré</p></button></th>
+                        <th><button type="button" id="btn-no" onclick="seleccionarAsistencia('NO asistiré')"><p>NO asistiré</p></button></th>
+                        <th><button type="submit" id="submit"><i class="fa-solid fa-paper-plane"></i></button></th>
+                    </tr>
+                </table>
+            </form>
+        </div>
         <div class="dots-memories">
             <img src="/resources/dots-memories.png"/>
             <p>Descarga Dot Memories aquí:</p>
@@ -248,44 +264,28 @@
             </button>
             <script>
                 function verApp() {
-                    window.location.href = "https://play.google.com/store/apps/details?id=social.onelife&hl=es/";
+                window.location.href = "https://play.google.com/store/apps/details?id=social.onelife&hl=es/";
                 }
             </script>
-        </div>
-        <div class="confirmar">
-            <h2 id="subtitulo">¡Confirma tu Asistencia!</h2>
-            <form method="post" action="" name="contact-form">
-                <p>Favor de confirmar asistencia por persona</p>
-                <input type="text" id="nombre" name="Nombre" placeholder="Ingresa tu Nombre"/>
-                <input type="text" id="apellido" name="Apellido" placeholder="Ingresa tu Apellido"required/>
-                <input type="hidden" id="asistencia" name="Asistencia" />
-              <table class="tabla__botones">
-                <tr>
-                  <th><button type="button" id="btn-si" onclick="seleccionarAsistencia('SÍ, asistiré')"><p>SÍ, asistiré</p></button></th>
-                  <th><button type="button" id="btn-no" onclick="seleccionarAsistencia('NO asistiré')"><p>NO asistiré</p></button></th>
-                  <th><button type="submit" id="submit"><i class="fa-solid fa-paper-plane"></i></button></th>
-                </tr>
-              </table>
-            </form>
         </div>          
-         <div class=sugerenciasHospedaje>     
-                <h2 id="subtitulo">Sugerencias de hospedaje</h2>
-                <h3>Hospedaje 1</h3>
-                <button type="button" id="hospedaje" onclick="verHospedaje1()"><p>Reservar</p></button>
-                 <script>
-                    function verHospedaje1() {
-                        window.location.href = "https://www.airbnb.mx/rooms/731099225429119036?guests=1&adults=1&s=67&unique_share_id=6ac50f9e-466b-4ab0-98d6-2b6919419881&source_impression_id=p3_1739678406_P3Pu0GlxNBQHapjs"; 
+        <div class=sugerenciasHospedaje>     
+            <h2 id="subtitulo">Sugerencias de hospedaje</h2>
+            <h3>Hospedaje 1</h3>
+            <button type="button" id="hospedaje" onclick="verHospedaje1()"><p>Reservar</p></button>
+            <script>
+                function verHospedaje1() {
+                    window.location.href = "https://www.airbnb.mx/rooms/731099225429119036?guests=1&adults=1&s=67&unique_share_id=6ac50f9e-466b-4ab0-98d6-2b6919419881&source_impression_id=p3_1739678406_P3Pu0GlxNBQHapjs"; 
                     }
-                 </script>
-                    <h3>Hospedaje 2</h3>
-                    <button type="button" id="hospedaje" onclick="verHospedaje2()"><p>Reservar</p></button>
-                       <script>
-                           function verHospedaje2() {
-                            window.location.href = "https://www.airbnb.mx/rooms/731121910498191818?guests=1&adults=1&s=67&unique_share_id=d8d74567-d7a2-4049-8f69-0f29b0b01294&source_impression_id=p3_1739678443_P3XbGJuNHlBAsHQe"; 
-                            }
-                </script>
-            </div>
-         <footer>
+            </script>
+            <h3>Hospedaje 2</h3>
+            <button type="button" id="hospedaje" onclick="verHospedaje2()"><p>Reservar</p></button>
+            <script>
+                function verHospedaje2() {
+                    window.location.href = "https://www.airbnb.mx/rooms/731121910498191818?guests=1&adults=1&s=67&unique_share_id=d8d74567-d7a2-4049-8f69-0f29b0b01294&source_impression_id=p3_1739678443_P3XbGJuNHlBAsHQe"; 
+                    }
+            </script>
+        </div>
+        <footer>
             <div class="footerContainer">
                 <img src="/resources/forestfooter.png" alt="Imagen de fondo">
                 <div class="piePagina">
