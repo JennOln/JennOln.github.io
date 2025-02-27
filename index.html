@@ -77,13 +77,46 @@
                 <label for="radio4" class="manual-btn"></label>
             </div>
             <script>
+                const radios = document.querySelectorAll('input[name="radio-btn"]');
+                const manualBtns = document.querySelectorAll('.manual-btn'); // Botones manuales
                 let counter = 1;
-                setInterval(() => {
+            
+                // Cambia la imagen automáticamente cada 5 segundos
+                const changeSlide = () => {
                     document.getElementById('radio' + counter).checked = true;
+                    updateManualButtons(counter); // Actualiza los botones manuales
                     counter++;
                     if (counter > 4) counter = 1;
-                }, 5000);
+                };
+            
+                // Inicia la auto-navegación
+                let slideInterval = setInterval(changeSlide, 5000);
+            
+                // Función para iluminar el botón correcto
+                const updateManualButtons = (activeIndex) => {
+                    manualBtns.forEach((btn, index) => {
+                        if (index === activeIndex - 1) {
+                            btn.style.background = "#fff"; // Cambia el fondo del botón activo
+                        } else {
+                            btn.style.background = "rgba(0, 0, 0, 0.5)"; // Fondo para botones inactivos
+                        }
+                    });
+                };
+            
+                // Manejo de clics manuales (sincroniza la navegación automática)
+                radios.forEach((radio, index) => {
+                    radio.addEventListener('change', () => {
+                        clearInterval(slideInterval); // Detener la auto-navegación al hacer clic
+                        counter = index + 1; // Sincroniza el contador
+                        updateManualButtons(counter); // Actualiza los botones manuales
+                        slideInterval = setInterval(changeSlide, 5000); // Reinicia la auto-navegación
+                    });
+                });
+            
+                // Inicializar los botones manuales
+                updateManualButtons(counter); // Asegura que el primer botón esté iluminado al cargar
             </script>
+            
         </div>
         <div class="fecha">
             <h2 id="subtitulo">Save The Date</h2>
@@ -221,19 +254,20 @@
         </div>
         <div class="confirmar">
             <h2 id="subtitulo">¡Confirma tu Asistencia!</h2>
-            <form id="confirmationForm">
+            <form method="post" action="" name="contact-form">
                 <p>Favor de confirmar asistencia por persona</p>
-                <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu Nombre"/>
-                <input type="text" id="apellido" name="apellido" placeholder="Ingresa tu Apellido"required/>
+                <input type="text" id="nombre" name="Nombre" placeholder="Ingresa tu Nombre"/>
+                <input type="text" id="apellido" name="Apellido" placeholder="Ingresa tu Apellido"required/>
+                <input type="hidden" id="asistencia" name="Asistencia" />
               <table class="tabla__botones">
                 <tr>
-                  <th><button type="button" id="btn-si"><p>SÍ, asistiré</p></button></th>
-                  <th><button type="button" id="btn-no"><p>NO asistiré</p></button></th>
-                  <th><button id="sent" type="submit"><i class="fa-solid fa-paper-plane"></i></button></th>
+                  <th><button type="button" id="btn-si" onclick="seleccionarAsistencia('SÍ, asistiré')"><p>SÍ, asistiré</p></button></th>
+                  <th><button type="button" id="btn-no" onclick="seleccionarAsistencia('NO asistiré')"><p>NO asistiré</p></button></th>
+                  <th><button type="submit" id="submit"><i class="fa-solid fa-paper-plane"></i></button></th>
                 </tr>
               </table>
             </form>
-          </div>          
+        </div>          
          <div class=sugerenciasHospedaje>     
                 <h2 id="subtitulo">Sugerencias de hospedaje</h2>
                 <h3>Hospedaje 1</h3>

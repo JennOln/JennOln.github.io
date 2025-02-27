@@ -140,30 +140,44 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(elemento);
     });
 
-    const botonSi = document.getElementById('btn-si');
-                const botonNo = document.getElementById('btn-no');
-                // Función para manejar el anclaje
-                function seleccionarBoton(boton) {
-                    // Quita la clase "seleccionado" de ambos botones
-                    botonSi.classList.remove('seleccionado');
-                    botonNo.classList.remove('seleccionado');
-                    // Añade la clase "seleccionado" solo al botón presionado
-                    boton.classList.add('seleccionado');
-                }
-    
-                // Añadir eventos a los botones
-                botonSi.addEventListener('click', () => seleccionarBoton(botonSi));
-                botonNo.addEventListener('click', () => seleccionarBoton(botonNo));
-
-    // Enviar formulario a Google Sheets
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbwqQEExtCKm347DVLTnZWaC3XQ2DExc4wJuZcVFCVgKQVDUw4pl4tio9dVsdAHIO-uz1g/exec';
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzfV7gHyPsAlsO8X2WllIERQk7RvzH8jEv7BXjTTiS5BSKgvS9pSPQEYMrFmuOIjESC/exec';
     const form = document.forms['contact-form'];
 
+    const botonSi = document.getElementById('btn-si');
+    const botonNo = document.getElementById('btn-no');
+    const asistenciaInput = document.getElementById('asistencia'); // El input oculto
+
+    // Función para manejar el anclaje y guardar el valor seleccionado
+    function seleccionarBoton(boton, valor) {
+        // Quita la clase "seleccionado" de ambos botones
+        botonSi.classList.remove('seleccionado');
+        botonNo.classList.remove('seleccionado');
+        
+        // Añade la clase "seleccionado" solo al botón presionado
+        boton.classList.add('seleccionado');
+
+        // Guarda el valor en el input oculto
+        asistenciaInput.value = valor;
+    }
+
+    // Añadir eventos a los botones
+    botonSi.addEventListener('click', () => seleccionarBoton(botonSi, 'SÍ, asistiré'));
+    botonNo.addEventListener('click', () => seleccionarBoton(botonNo, 'NO asistiré'));
+
+    // Evento de envío del formulario
     form.addEventListener('submit', e => {
         e.preventDefault();
-        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => alert("Thank you! Form is submitted"))
+
+        // Validar que el usuario haya seleccionado una opción
+        if (!asistenciaInput.value) {
+            alert('Por favor selecciona si asistirás o no.');
+            return;
+        }
+
+        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+            .then(response => alert("¡Gracias! Tu confirmación ha sido enviada"))
             .then(() => { window.location.reload(); })
             .catch(error => console.error('Error!', error.message));
     });
+
 });

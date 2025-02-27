@@ -108,8 +108,9 @@ h4{
 
 /** SLIDER DE SESION DE FOTOS**/
 .sliderCarrusel{
-    width: calc(100% - 20px); /* Ancho completo menos 10px de padding a cada lado */
-    height: calc(100vh - 20px); /* Altura completa menos 10px de padding arriba y abajo */
+    width: 90%; /* O el ancho que desees */
+    margin: 0 auto; /* Esto lo centra */
+    height: calc(100vh - 20px);
     overflow: hidden;
     border-radius: 1000px; /* Opcional: redondea las esquinas */
     box-sizing: border-box; /* Asegúrate de que el padding no altere las dimensiones */
@@ -594,9 +595,13 @@ span{
 
 #nombre,
 #apellido{
-    font-weight: 550;
+    height: 35px;
+    width: 270px;
+    margin: 3px;
+    text-align: center;
+    font-weight: 650;
     font-family: "Fleur De Leah", serif;
-    font-size: 100px;
+    font-size: 300px;
     font-style: normal;
     font-size: 15px;
     border-radius: 10px;
@@ -611,13 +616,13 @@ span{
 }
 
 
-#sent {
+
+#submit {
     font-family: inherit;
     font-size: 18px;
     background: linear-gradient(to bottom, rgb(163, 137, 113) 0%,rgb(136, 110, 86) 100%);
     color: white;
-    padding: 0.5em 1.5em;
-    display: flex;
+    padding: 20px 12px;
     align-items: center;
     justify-content: center;
     border: none;
@@ -626,49 +631,49 @@ span{
     transition: all 0.3s;
 }
 
-#sent:hover{
+#submit:hover{
     transform: translateY(-3px);
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
-    padding: 1rem;
+    padding: 10px;
     background: linear-gradient(to bottom, #775a33 0%,#82a77b 100%);
     cursor: pointer;
 }
 
-#sent:active {
+#submit:active {
     transform: scale(0.95);
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-#sent span {
+#submit span {
     display: block;
     margin-left: 0.4em;
     transition: all 0.3s;
   }
-  #sent svg {
+#submit svg {
     width: 18px;
     height: 18px;
     fill: white;
     transition: all 0.3s;
 }
 
-#sent .svg-wrapper {
+#submit .svg-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.2);
     margin-right: 0.5em;
     transition: all 0.3s;
 }
 
-#sent:hover .svg-wrapper {
+#submit:hover .svg-wrapper {
     background-color: rgba(255, 255, 255, 0.5);
     width: 54px;
     height: 54px;
 }
-#sent:hover svg {
+#submit:hover svg {
     width: 25px;
     height: 25px;
     margin-right: 5px;
@@ -861,7 +866,6 @@ h2.visible{
 #mapa,
 #btn-si,
 #btn-no,
-#sent,
 #hospedaje,
 #app__boton {
     opacity: 0;
@@ -873,7 +877,6 @@ h2.visible{
 #mapa.visible,
 #btn-si.visible,
 #btn-no.visible,
-#sent.visible,
 #hospedaje.visible,
 #app__boton.visible {
     opacity: 1;
