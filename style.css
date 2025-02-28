@@ -17,6 +17,86 @@ body {
     height: 1030px;
 }
 
+/* Contenedor del reproductor de audio */
+.audio-player {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: none;
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Barra de progreso en la parte superior */
+/* Estilos generales del slider */
+.progress-bar {
+    -webkit-appearance: none; /* Elimina el estilo predeterminado del slider */
+    appearance: none;
+    width: 100%;
+    height: 5px; /* El grosor de la barra */
+    background: #ffffffb7; /* Color de fondo de la barra */
+    border-radius: 5px; /* Opcional: redondea los bordes de la barra */
+    transition: background 0.3s ease;
+}
+
+/* Estilos para el thumb (el punto que se mueve) */
+.progress-bar::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Elimina el estilo predeterminado */
+    appearance: none;
+    width: 25px; /* Ancho del thumb */
+    height: 25px; /* Alto del thumb */
+    border-radius: 50%; /* Hace que el thumb sea circular */
+    background-image: url('resources/progress_bar.png'); /* Aquí agregas la imagen que reemplaza el punto */
+    background-size: cover; /* Hace que la imagen cubra el tamaño del thumb */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el thumb */
+    border: none; /* Elimina el borde predeterminado */
+}
+
+/* Estilo para otros navegadores que soportan pseudo-elementos */
+.progress-bar::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-image: url('resources/progress_bar.png'); /* Aquí agregas la imagen */
+    background-size: cover;
+    border: none;
+    cursor: pointer;
+}
+
+.progress-bar:focus {
+    outline: none;
+}
+
+.progress-bar:hover {
+    background: #b3d7ff;
+}
+
+/* Estilos para el botón de play/pause en la parte inferior */
+.play-pause {
+    background: none;
+    border: 2px solid rgb(85, 102, 38); /* El borde del círculo */
+    border-radius: 50%; /* Hace que el borde sea circular */
+    width: 60px; /* Tamaño del círculo */
+    height: 60px; /* Tamaño del círculo */
+    font-size: 25px;
+    margin-top: 10px;
+    color: rgb(85, 102, 38);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centra el icono dentro del círculo */
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Hover para el botón */
+.play-pause:hover {
+    color: rgb(85, 102, 38);
+    border-color: rgb(85, 102, 38); /* Cambia el borde al hacer hover */
+}
+
+
 /** Fuentes **/
 .titulo {
     color: rgb(85, 102, 38);
@@ -834,9 +914,12 @@ h3,
 .NuestrosPadres,
 .contenedorVestimenta, 
 h2,
-.itinerario img,
-.sparky img,
-#contador {
+#contador,
+.itinerario,
+.sparky,
+.ceremonia,
+.sliderCarrusel,
+.dots-memories{
     opacity: 0;
     transform: translateY(100px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
@@ -850,9 +933,12 @@ h3.visible,
 .NuestrosPadres.visible,
 .contenedorVestimenta.visible,
 h2.visible,
-.itinerario img,
-.sparky img,
-#contador.visible{
+#contador.visible,
+.itinerario.visible,
+.sparky.visible,
+.ceremonia.visible,
+.sliderCarrusel.visible,
+.dots-memories.visible{
     opacity: 1;
     transform: translateY(0);
 }
@@ -865,16 +951,19 @@ h2.visible,
 .savethedate.visible,
 .fecha.visible,
 p.visible,
-h3.visible {
+h3.visible,
+.itinerario.visible{
     animation: slideUp 3s ease-out forwards;
 }
 
 .NuestrosPadres.visible,
 .contenedorVestimenta.visible,
 h2.visible,
-.itinerario img,
-.sparky img,
-#contador.visible{
+#contador.visible,
+.sparky.visible,
+.ceremonia.visible,
+.sliderCarrusel.visible,
+.dots-memories.visible{
     animation: animateBlur 3s ease-out forwards;
 }
 

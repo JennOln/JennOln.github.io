@@ -90,6 +90,36 @@ window.addEventListener("resize", function() {
 loop();
 setInterval(loop, 1000 / 60);
 */
+const audio = document.getElementById('audio');
+const playPauseBtn = document.getElementById('playPauseBtn');
+const playIcon = playPauseBtn.querySelector('i');
+const progressBar = document.getElementById('progressBar');
+
+// Controlar Play/Pause
+playPauseBtn.addEventListener('click', () => {
+    if (audio.paused) {
+        audio.play();
+        playIcon.classList.remove('fa-play');
+        playIcon.classList.add('fa-pause');
+    } else {
+        audio.pause();
+        playIcon.classList.remove('fa-pause');
+        playIcon.classList.add('fa-play');
+    }
+});
+
+// Actualizar la barra de progreso a medida que se reproduce el audio
+audio.addEventListener('timeupdate', () => {
+    const progress = (audio.currentTime / audio.duration) * 100;
+    progressBar.value = progress;
+});
+
+// Permitir al usuario cambiar el progreso del audio al interactuar con la barra
+progressBar.addEventListener('input', () => {
+    const value = progressBar.value;
+    audio.currentTime = (value / 100) * audio.duration;
+});
+
 document.addEventListener('DOMContentLoaded', function() {
     const $days = document.getElementById('dias'),
           $horas = document.getElementById('horas'),
@@ -136,7 +166,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }, { threshold: 0.1 });
 
-    document.querySelectorAll('.titulo, .savethedate, .fecha, p, h3, .NuestrosPadres, .contenedorVestimenta, h2, #mesaRegalos__boton, #mapa, #btn-si, #btn-no, #submit, #hospedaje, #app__boton, .itinerario img, .sparky img, #contador').forEach(elemento => {
+    document.querySelectorAll('.titulo, .savethedate, .fecha, p, h3, .NuestrosPadres, .contenedorVestimenta, h2, #mesaRegalos__boton, #mapa, #btn-si, #btn-no, #submit, #hospedaje, #app__boton, #contador, .itinerario, .sparky, .ceremonia, .sliderCarrusel, .dots-memories').forEach(elemento => {
         observer.observe(elemento);
     });
 

@@ -25,10 +25,17 @@
 <body>
     <div class="resolucion">
         <div class="Encabezado">
-            <audio controls autoplay>
-                <source src="Concerning Hobbits.mp3" type="audio/mpeg"> 
+            <audio id="audio">
+                <source src="Concerning Hobbits.mp3" type="audio/mpeg">
                 Tu navegador no soporta la reproducción de <audio src=""></audio>
             </audio>
+            <div class="audio-player">
+                <input type="range" id="progressBar" class="progress-bar" value="0" step="1" min="0" max="100">
+                <button id="playPauseBtn" class="play-pause">
+                    <i class="fa fa-play"></i>
+                </button>
+            </div>
+                      
             <div class="evento" id="nuestraBoda"><h2>Nuestra Boda</h2></div>
             <div class="titulo" id="titulo">
                 <!--<h1>Novia<br>&<br>Novio</h1>-->
