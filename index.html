@@ -17,6 +17,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cherish&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=The+Nautigal:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
     <!-- font-awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
@@ -39,7 +40,7 @@
             <div class="evento" id="nuestraBoda"><h2>Nuestra Boda</h2></div>
             <div class="titulo" id="titulo">
                 <!--<h1>Novia<br>&<br>Novio</h1>-->
-                <h1>nombreNovia<br>&<br>nombre Novio</h1>
+                <h1>Jennifer<br>&<br>Jorge Luis</h1>
             </div>
         </div>
         <p id="frase">"Preferiría vivir una vida contigo que pasar el resto de las edades sin ti"
@@ -124,6 +125,9 @@
                 </script>
                 
         </div>
+        <div class="dots-memories">
+            <img src="/resources/J&JL.png"/>
+        </div>
         <div class="fecha">
             <h2 id="subtitulo">Save The Date</h2>
             <div class="savethedate">dd·mm·aa</div>
@@ -203,6 +207,7 @@
             <h2 id="subtitulo"> Itinerario</h2>
             <img src="/resources/itinerario.png" alt="Itinerario" class='itinerario'>
         </div>
+        <p>Su presencia es lo más importante en este día tan especial, pero si algo nos quieren regalar lo sabremos apreciar</p>
         <div class="mesaRegalos">
             <h2 id="subtitulo">Mesa de Regalos</h2>
             <button type="button" id="mesaRegalos__boton" onclick="verMesa()">
@@ -213,6 +218,8 @@
                     window.location.href = "https://www.amazon.com.mx/";
                 }
             </script>
+            <h2 id="subtitulo">Lluvia de sobres</h2>
+            <p>Los presentes que deseen hacernos en efectivo podrán colocarlos en un sobre que encontraran el día de la celebración</p>
         </div>
         <div class="contenedorVestimenta">
             <img src="/resources/img1.png" alt="Imagen de fondo">
@@ -247,6 +254,19 @@
                 </div>
             </div>
         </div>
+        <div class="dots-memories">
+            <p>¡Comparte tus recuerdos! Escanea el código o da clic en el link y sube las fotos que captures el gran día </p>
+            <img src="/resources/dots-memories.png"/>
+            <p>Descarga Dot Memories aquí:</p>
+            <button type="button" id="app__boton" onclick="verApp()">
+                <i class="fa-solid fa-download"></i></button>
+            </button>
+            <script>
+                function verApp() {
+                window.location.href = "https://play.google.com/store/apps/details?id=social.onelife&hl=es/";
+                }
+            </script>
+        </div>    
         <div class="confirmar">
             <h2 id="subtitulo">¡Confirma tu Asistencia!</h2>
             <form method="post" action="" name="contact-form">
@@ -263,18 +283,6 @@
                 </table>
             </form>
         </div>
-        <div class="dots-memories">
-            <img src="/resources/dots-memories.png"/>
-            <p>Descarga Dot Memories aquí:</p>
-            <button type="button" id="app__boton" onclick="verApp()">
-                <i class="fa-solid fa-download"></i></button>
-            </button>
-            <script>
-                function verApp() {
-                window.location.href = "https://play.google.com/store/apps/details?id=social.onelife&hl=es/";
-                }
-            </script>
-        </div>          
         <div class=sugerenciasHospedaje>     
             <h2 id="subtitulo">Sugerencias de hospedaje</h2>
             <h3>Hospedaje 1</h3>
@@ -290,7 +298,7 @@
                 function verHospedaje2() {
                     window.location.href = "https://www.airbnb.mx/rooms/731121910498191818?guests=1&adults=1&s=67&unique_share_id=d8d74567-d7a2-4049-8f69-0f29b0b01294&source_impression_id=p3_1739678443_P3XbGJuNHlBAsHQe"; 
                     }
-            </script>
+            </script> 
         </div>
         <footer>
             <div class="footerContainer">
