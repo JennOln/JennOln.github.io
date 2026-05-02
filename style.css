@@ -158,7 +158,7 @@ h3{
 h4{
     font-family: "The Nautigal", serif;
     text-align: center;
-    color: rgb(13, 100, 64);
+    color: beige;
     text-shadow: 2px 2px black;
 }
 
@@ -390,7 +390,7 @@ span{
     bottom: -30%;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 7rem;
+    font-size: 4rem;
 }
 /** GALERIA DE FOTOS DE NOVIOS**/
 
