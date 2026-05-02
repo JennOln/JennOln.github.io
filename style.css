@@ -117,8 +117,8 @@ h1{
 }
 
 #nuestraBoda{
-    margin-top: 450px; /* Elimina cualquier margen superior si lo hay */
-    color: beige;
+    margin-top: 450px; /* Regresar a 250 si no funciona */
+    color: rgb(13, 100, 64);
 }
 
 #subtitulo{
