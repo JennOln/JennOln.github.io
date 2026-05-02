@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', function() {
           $finalMessage = document.querySelector('.final-sms'); // Usar clase correcta
 
     // Fecha futura
-    const countdownDate = new Date('Oct 29, 2025 00:17:00').getTime(); // Corregir la sintaxis de la fecha
+    const countdownDate = new Date('Dic 27, 2026 00:16:00').getTime(); // Corregir la sintaxis de la fecha
 
     let interval = setInterval(function() {
         // Obtener fecha actual y milisegundos
