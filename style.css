@@ -217,8 +217,8 @@ h4{
 }
 
 .slide img {
-    width: 70%; /* Imagen ocupa todo el ancho */
-    height: 70%; /* Imagen ocupa toda la altura */
+    width: 100%; /* Imagen ocupa todo el ancho */
+    height: 100%; /* Imagen ocupa toda la altura */
     object-fit: cover; /* Ajusta la imagen recortando para mantener la proporción */
 }
 
