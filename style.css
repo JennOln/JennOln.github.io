@@ -76,13 +76,13 @@ body {
 /* Estilos para el botón de play/pause en la parte inferior */
 .play-pause {
     background: none;
-    border: 2px solid rgb(85, 102, 38); /* El borde del círculo */
+    border: 2px solid rgb(13, 100, 64); /* El borde del círculo */
     border-radius: 50%; /* Hace que el borde sea circular */
     width: 60px; /* Tamaño del círculo */
     height: 60px; /* Tamaño del círculo */
     font-size: 25px;
     margin-top: 10px;
-    color: rgb(85, 102, 38);
+    color: rgb(13, 100, 64);
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -92,14 +92,14 @@ body {
 
 /* Hover para el botón */
 .play-pause:hover {
-    color: rgb(85, 102, 38);
-    border-color: rgb(85, 102, 38); /* Cambia el borde al hacer hover */
+    color: rgb(13, 100, 64);
+    border-color: rgb(13, 100, 64); /* Cambia el borde al hacer hover */
 }
 
 
 /** Fuentes **/
 .titulo {
-    color: rgb(85, 102, 38);
+    color: rgb(13, 100, 64);
     text-shadow: 2px 2px black;
 }
 
