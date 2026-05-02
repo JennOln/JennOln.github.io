@@ -117,7 +117,7 @@ h1{
 }
 
 #nuestraBoda{
-    margin-top: 250px; /* Elimina cualquier margen superior si lo hay */
+    margin-top: 450px; /* Elimina cualquier margen superior si lo hay */
     color: beige;
 }
 
@@ -390,7 +390,7 @@ span{
     bottom: -30%;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 4rem;
+    font-size: 6rem;
 }
 /** GALERIA DE FOTOS DE NOVIOS**/
 
