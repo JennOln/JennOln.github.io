@@ -349,6 +349,10 @@ span{
     text-align: center;
 }
 
+.hidden {
+    display: none !important;
+}
+
 .final-sms {
     position: absolute;
     left: 0;

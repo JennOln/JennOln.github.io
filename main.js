@@ -125,17 +125,21 @@ document.addEventListener('DOMContentLoaded', function() {
           $horas = document.getElementById('horas'),
           $minutos = document.getElementById('minutos'),
           $segundos = document.getElementById('segundos'),
-          $finalMessage = document.querySelector('.final-sms'); // Usar clase correcta
-
-    // Fecha futura
-    const countdownDate = new Date('Dic 27, 2026 00:16:00').getTime(); // Corregir la sintaxis de la fecha
+          $finalMessage = document.querySelector('.final-sms'), // Usar clase correcta
+          $counterContainer = document.querySelector('.container__counter');
+    
+    // Fecha de la boda
+    const countdownDate = new Date('2026-12-27T00:16:00').getTime();
 
     let interval = setInterval(function() {
-        // Obtener fecha actual y milisegundos
         const now = new Date().getTime();
-
-        // Obtener la distancia entre ambas fechas
         let distance = countdownDate - now;
+        // Cuando llegue a 0
+        if (distance <= 0) {
+            clearInterval(interval);
+            $counterContainer.classList.add('hidden'); // Ocultar el contador
+            $finalMessage.classList.add('show');
+        }
 
         // Calcular días-horas-minutos-segundos
         let dias = Math.floor(distance / (1000 * 60 * 60 * 24));
@@ -145,17 +149,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Escribir resultados
         $days.innerHTML = dias;
-        $horas.innerHTML = horas;
-        $minutos.innerHTML = minutos;
+        $horas.innerHTML = ('0' + horas).slice(-2);
+        $minutos.innerHTML = ('0' + minutos).slice(-2);
         $segundos.innerHTML = ('0' + segundos).slice(-2);
 
-        // Cuando llegue a 0
-        if (distance < 0) {
-            clearInterval(interval);
-            $finalMessage.style.transform = 'translateY(0)';
-            $finalMessage.style.opacity = '1';
-        }
     }, 1000);
+    
 
     // Intersection Observer para animaciones anteriores
     let observer = new IntersectionObserver((entries) => {
