@@ -21,16 +21,6 @@ canvas{
     height: 1030px;
 }
 
-/** Fuentes **/
-.titulo {
-    text-shadow: 2px 2px black;
-    font-size: 7rem;
-}
-
-.damas{
-    font-size: 2rem;
-}
-
 #frase { 
     color:rgb(109, 89, 64);
     font-family: 'Great Vibes';
@@ -39,6 +29,19 @@ canvas{
     margin-bottom: 250px;
 }
 
+.titulo {
+    text-shadow: 2px 2px black;
+    font-size: 7rem;
+}
+
+/* Pon esto al final de todo tu archivo CSS */
+div.lista-damas {
+    font-family: "The Nautigal", serif !important;
+    color: rgb(85, 102, 38) !important;
+    text-align: center !important;
+    font-size: 3rem !important; 
+    
+}
 
 h1{
     color:rgb(85, 102, 38);
