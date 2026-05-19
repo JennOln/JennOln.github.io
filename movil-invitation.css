@@ -35,16 +35,6 @@ canvas{
     margin-bottom: 250px;
 }
 
-.lista-damas {
-    color: rgb(73, 107, 81);
-    font-family: 'Great Vibes', cursive;
-    font-size: 2.2rem; /* Subí un poco el tamaño porque Great Vibes suele verse pequeña */
-    text-align: center;
-    display: block;
-    margin-top: 50px;
-    margin-bottom: 100px;
-}
-
 h1{
     font-family: "The Nautigal", serif;
     font-size: 7rem;
