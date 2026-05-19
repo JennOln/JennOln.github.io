@@ -56,6 +56,7 @@ h2{
 }
 
 p {
+    padding: 50px;
     font-family: Cormorant Unicase; 
     font-size: 1rem;
     text-align: center;
