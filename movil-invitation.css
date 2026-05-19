@@ -29,10 +29,20 @@ canvas{
 
 #frase { 
     color:rgb(109, 89, 64);
-    font-family: Great Vibes;
+    font-family: 'Great Vibes';
     font-size: 1.5rem;
     margin-top: 250px;
     margin-bottom: 250px;
+}
+
+.lista-damas {
+    color: rgb(73, 107, 81);
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.2rem; /* Subí un poco el tamaño porque Great Vibes suele verse pequeña */
+    text-align: center;
+    display: block;
+    margin-top: 50px;
+    margin-bottom: 100px;
 }
 
 h1{
@@ -49,6 +59,7 @@ h1{
     color: rgb(77, 61, 43);
     text-align: center;
 }
+
 h2{ 
     font-family: 'Ringbearer', sans-serif;
     font-size: 2rem;
@@ -88,7 +99,7 @@ h4{
 }
 
 /** Propiedades de FOTOS  **/
-.evento .titulo .frase{
+.evento .titulo .frase {
     position: absolute;
     top: 50%;
     left: 50%;
