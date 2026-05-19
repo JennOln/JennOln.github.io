@@ -34,15 +34,6 @@ canvas{
     font-size: 7rem;
 }
 
-/* Pon esto al final de todo tu archivo CSS */
-div.lista-damas {
-    font-family: "The Nautigal", serif !important;
-    color: rgb(85, 102, 38) !important;
-    text-align: center !important;
-    font-size: 3rem !important; 
-    
-}
-
 h1{
     color:rgb(85, 102, 38);
     font-family: "The Nautigal", serif;
