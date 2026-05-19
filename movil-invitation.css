@@ -23,8 +23,12 @@ canvas{
 
 /** Fuentes **/
 .titulo {
-    color: rgb(85, 102, 38);
     text-shadow: 2px 2px black;
+    font-size: 7rem;
+}
+
+.damas{
+    font-size: 2rem;
 }
 
 #frase { 
@@ -35,9 +39,10 @@ canvas{
     margin-bottom: 250px;
 }
 
+
 h1{
+    color:rgb(85, 102, 38);
     font-family: "The Nautigal", serif;
-    font-size: 7rem;
 }
 
 #nuestraBoda{
