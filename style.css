@@ -127,7 +127,7 @@ h1{
 }
 h2{ 
     font-family: 'Ringbearer', sans-serif;
-    font-size: 2rem;
+    font-size: 2.3rem;
     
 }
 
@@ -156,10 +156,10 @@ h3{
     opacity: 0;                             /* Invisible inicialmente */
 }
 h4{
+    font-size: 3rem;
     font-family: "The Nautigal", serif;
     text-align: center;
     color: rgb(13, 100, 64);
-    text-shadow: 2px 2px beige;
 }
 
 /** Propiedades de FOTOS  **/
@@ -370,10 +370,6 @@ span{
     font-size: 100px;
     color: black;
 }
-.itinerario img{
-    position: relative;
-    width: 100%;
-}
 
 
 .sparky{
@@ -389,13 +385,7 @@ span{
     display: block;
 }
 
-.sparkyText{
-    position: absolute;
-    bottom: -30%;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 6rem;
-}
+
 /** GALERIA DE FOTOS DE NOVIOS**/
 
 
@@ -996,3 +986,144 @@ h2.visible,
     transform: translateY(0);
     animation: bounce 3s ease-out forwards;
 }
+
+/* Importamos una fuente estilo serif elegante para dar ese toque clásico/fantástico */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap');
+
+/* Contenedor principal: Simula el fondo de pergamino */
+.itinerario-tierra-media {
+  font-family: 'Cormorant Garamond', serif;
+  background-color: #faf4e2; /* Tono beige/pergamino claro */
+  color: rgb(109, 89, 64); /* Verde oscuro estilo bosque élfico */
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  border: 2px solid rgb(109, 89, 64); /* Borde dorado apagado */
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  /* Patrón sutil para dar textura (opcional) */
+  background-image: radial-gradient(#e5d9b5 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Estilos del encabezado principal */
+.encabezado {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.encabezado h1 {
+  font-family: 'Cinzel', serif; /* Fuente principal similar a la del anillo */
+  font-size: 2.5rem;
+  color: rgb(109, 89, 64);
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+.encabezado p {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #b89947;
+  margin-top: 5px;
+}
+
+/* Contenedor de la línea de tiempo vertical */
+.linea-tiempo {
+  position: relative;
+  padding: 20px 0;
+}
+
+/* La línea dorada central que conecta los eventos */
+.linea-tiempo::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%; /* Centra la línea */
+  width: 2px;
+  background-color: #b89947; /* Color dorado */
+  transform: translateX(-50%);
+}
+
+/* Cada bloque de evento (hora + tarjeta) */
+.evento {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  position: relative;
+  width: 100%;
+}
+
+/* Estilo para las etiquetas de las horas */
+.hora {
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  color: #b89947;
+  width: 40%;
+  text-align: right;
+  padding-right: 30px;
+  font-size: 1.2rem;
+}
+
+/* Las tarjetas emulan los estandartes del diseño original */
+.tarjeta {
+  width: 40%;
+  padding-left: 30px;
+  text-align: left;
+  position: relative;
+}
+
+/* Punto decorativo en el centro de la línea de tiempo */
+.tarjeta::before {
+  content: '✦'; /* Símbolo de estrella para dar un toque místico */
+  position: absolute;
+  left: -12px; /* Ajuste para centrar sobre la línea */
+  top: 50%;
+  transform: translateY(-50%);
+  color: #4b6445;
+  font-size: 1.2rem;
+  background-color: #faf4e2; /* Fondo igual al pergamino para tapar la línea */
+  padding: 5px;
+}
+
+.tarjeta h3 {
+  font-family: 'Cinzel', serif;
+  margin: 0;
+  font-size: 1.4rem;
+  color: rgb(109, 89, 64);
+  /* Subrayado sutil */
+  border-bottom: 1px solid #b89947;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.tarjeta p {
+  margin: 5px 0 0 0;
+  font-size: 1.1rem;
+  font-style: italic;
+  color: rgb(109, 89, 64);
+}
+
+/* Para alternar los lados y darle dinamismo (Opcional) */
+.evento:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.evento:nth-child(even) .hora {
+  text-align: left;
+  padding-right: 0;
+  padding-left: 30px;
+}
+
+.evento:nth-child(even) .tarjeta {
+  text-align: right;
+  padding-left: 0;
+  padding-right: 30px;
+}
+
+.evento:nth-child(even) .tarjeta::before {
+  left: auto;
+  right: -12px;
+}
+

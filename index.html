@@ -1,81 +1,104 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jennifer y Jorge Luis</title>
-    <link rel="stylesheet" href="style.css" />
-    <!-- FUENTES (TIPOS DE LETRA)-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Metamorphous&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Unicase:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.cdnfonts.com/css/ringbearer" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lovers+Quarrel&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Fleur+De+Leah&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Cherish&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=The+Nautigal:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
-    <!-- font-awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
-    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body>
-    <div class="resolucion">
-        <div class="Encabezado">
-            <audio id="audio">
-                <source src="The Return Of The King.mp3" type="audio/mpeg" autoplay loop>
-                Tu navegador no soporta la reproducción de <audio src=""></audio>
-            </audio>
-            <div class="audio-player">
-                <input type="range" id="progressBar" class="progress-bar" value="0" step="1" min="0" max="100">
-                <button id="playPauseBtn" class="play-pause">
-                    <i class="fa fa-play"></i>
-                </button>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Jennifer y Jorge Luis</title>
+        <link rel="stylesheet" href="style.css" />
+        <!-- FUENTES (TIPOS DE LETRA)-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
+            rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Metamorphous&display=swap"
+            rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cormorant+Unicase:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet">
+        <link href="https://fonts.cdnfonts.com/css/ringbearer" rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lovers+Quarrel&display=swap"
+            rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Fleur+De+Leah&display=swap"
+            rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cherish&display=swap"
+            rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css2?family=The+Nautigal:wght@400;700&display=swap"
+            rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap"
+            rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&display=swap"
+            rel="stylesheet">
+        <!-- font-awesome -->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+            integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <div class="resolucion">
+            <div class="Encabezado">
+                <audio id="audio">
+                    <source src="Sleepsong.mp3" type="audio/mpeg"
+                        autoplay loop>
+                    Tu navegador no soporta la reproducción de <audio
+                        src></audio>
+                </audio>
+                <div class="audio-player">
+                    <input type="range" id="progressBar" class="progress-bar"
+                        value="0" step="1" min="0" max="100">
+                    <button id="playPauseBtn" class="play-pause">
+                        <i class="fa fa-play"></i>
+                    </button>
+                </div>
+
+                <div class="evento" id="nuestraBoda"><h2>Nuestra Boda</h2></div>
+                <div class="titulo" id="titulo">
+                    <!--<h1>Novia<br>&<br>Novio</h1>-->
+                    <h1>Jennifer Cassandra<br>&<br>Jorge Luis</h1>
+                </div>
             </div>
-                      
-            <div class="evento" id="nuestraBoda"><h2>Nuestra Boda</h2></div>
-            <div class="titulo" id="titulo">
-                <!--<h1>Novia<br>&<br>Novio</h1>-->
-                <h1>Jennifer<br>&<br>Jorge Luis</h1>
-            </div>
-        </div>
-        <p id="frase">"Preferiría vivir una vida contigo que pasar el resto de las edades sin ti"
+            <p
+                id="frase">"Preferiría vivir una vida contigo que pasar el resto de las edades sin ti"
                 <br>― J. R. R. Tolkien</p>
-        <div class="sliderCarrusel">
-            <div class="slides">
-                <!-- Radio buttons for navigation -->
-                <input type="radio" name="radio-btn" id="radio1">
-                <input type="radio" name="radio-btn" id="radio2">
-                <input type="radio" name="radio-btn" id="radio3">
-                <input type="radio" name="radio-btn" id="radio4">
+            <div class="sliderCarrusel">
+                <div class="slides">
+                    <!-- Radio buttons for navigation -->
+                    <input type="radio" name="radio-btn" id="radio1">
+                    <input type="radio" name="radio-btn" id="radio2">
+                    <input type="radio" name="radio-btn" id="radio3">
+                    <input type="radio" name="radio-btn" id="radio4">
 
-                <!-- Slide images -->
-                <div class="slide first">
-                    <img src="/sesion/img1.jpg" alt="Imagen 1">
-                </div>
-                <div class="slide">
-                    <img src="/sesion/img2.jpg" alt="Imagen 2">
-                </div>
-                <div class="slide">
-                    <img src="/sesion/img3.jpg" alt="Imagen 3">
-                </div>
-                <div class="slide">
-                    <img src="/sesion/img4.jpg" alt="Imagen 4">
-                </div>
+                    <!-- Slide images -->
+                    <div class="slide first">
+                        <img src="/sesion/img1.jpg" alt="Imagen 1">
+                    </div>
+                    <div class="slide">
+                        <img src="/sesion/img2.jpg" alt="Imagen 2">
+                    </div>
+                    <div class="slide">
+                        <img src="/sesion/img3.jpg" alt="Imagen 3">
+                    </div>
+                    <div class="slide">
+                        <img src="/sesion/img4.jpg" alt="Imagen 4">
+                    </div>
 
-                <!-- Automatic navigation -->
-                <div class="navigation-auto">
-                    <div class="auto-btn1"></div>
-                    <div class="auto-btn2"></div>
-                    <div class="auto-btn3"></div>
-                    <div class="auto-btn4"></div>
+                    <!-- Automatic navigation -->
+                    <div class="navigation-auto">
+                        <div class="auto-btn1"></div>
+                        <div class="auto-btn2"></div>
+                        <div class="auto-btn3"></div>
+                        <div class="auto-btn4"></div>
                     </div>
                 </div>
-        
+
                 <!-- Manual navigation -->
                 <div class="navigation-manual">
                     <label for="radio1" class="manual-btn"></label>
@@ -123,180 +146,264 @@
                     // Inicializar los botones manuales
                     updateManualButtons(counter); // Asegura que el primer botón esté iluminado al cargar
                 </script>
-                
-        </div>
-        <div class="dots-memories">
-            <img src="/resources/J&JL.png"/>
-        </div>
-        <div class="fecha">
-            <h2 id="subtitulo">Save The Date</h2>
-            <div class="savethedate">27·12·2026</div>
-            <h3>3:30PM</h3>
-        </div>
-        <div class="container__counter">
-            <h3>¡Estamos contando los días!</h3>
-            <div id="contador">
-                <div class="unidad">
-                    <h5 id="dias">00</h5>
-                    <span><h6>Días</h6></span>
-                </div>
-                <div class="unidad">
-                    <h5 id="horas">00</h5>
-                    <span><h6>Horas</h6></span>
-                </div>
-                <div class="unidad">
-                    <h5 id="minutos">00</h5>
-                    <span><h6>Minutos</h6></span>
-                </div>
-                <div class="unidad">
-                    <h5 id="segundos">00</h5>
-                    <span><h6>Segundos</h6></span>
-                </div>
+
             </div>
-        </div>
-        <p class="final-sms">¡HOY ES EL GRAN DÍA!💍💖</p>   
-        <div class="NuestrosPadres">
-            <img src="resources/mordor.jpg" alt="Imagen de fondo">
-            <div class="nuestrosPadresTexto">
-                <h2 id="subtitulo">Nuestros Padres</h2>
-                <h3>NOVIA</h3>
-                <p>Teresa Osuna <br>Jesús Gonzalez</p>
-                <h3>NOVIO</h3>
-                <p>Guadalupe Olivera<br>Jorge Magaña</p>
+            <div class="dots-memories">
+                <img src="/resources/J&JL.png" />
             </div>
-        </div>
-        <p id="frase">"Aunque todos los peligros me acechen,
-             mi destino está ligado al tuyo, y mis pasos siempre 
-             buscarán el camino que me lleve de vuelta a tu lado." <br>―Beren</p>
-        <div class="ceremonia">
-            <h2 id="subtitulo">Ceremonia</h2>
-            <div class="slider-container">
-                <div class="slide">
-                    <div class="item" style="background-image: url(./Salon/img1.jpeg);">
-                        <div class="content">
-                            <div class="name"><p id="nombreLugar">ROSA <br> MORADA</p></div>
-                            <div class="des"><p id="lugar">Bosque de la
-                                <br> Primavera, Jal.</p>
-                            </div>
-                            <button type="button" id="mapa" onclick="verMapa()">
-                                <i class="fa-solid fa-map-location-dot"></i>
-                            </button>
-                        </div>
+            <div class="fecha">
+                <h2 id="subtitulo">Save The Date</h2>
+                <div class="savethedate">27·12·2026</div>
+                <h3>3:15PM</h3>
+            </div>
+            <div class="container__counter">
+                <h3>¡Estamos contando los días!</h3>
+                <div id="contador">
+                    <div class="unidad">
+                        <h5 id="dias">00</h5>
+                        <span><h6>Días</h6></span>
                     </div>
-                    <div class="item" style="background-image: url(./Salon/img2.jpeg);"></div>
-                    <div class="item" style="background-image: url(./Salon/img3.jpeg);"></div>
-                    <div class="item" style="background-image: url(./Salon/img4.jpeg);"></div>
-                    <div class="item" style="background-image: url(./Salon/img5.jpeg);"></div>
+                    <div class="unidad">
+                        <h5 id="horas">00</h5>
+                        <span><h6>Horas</h6></span>
+                    </div>
+                    <div class="unidad">
+                        <h5 id="minutos">00</h5>
+                        <span><h6>Minutos</h6></span>
+                    </div>
+                    <div class="unidad">
+                        <h5 id="segundos">00</h5>
+                        <span><h6>Segundos</h6></span>
+                    </div>
                 </div>
             </div>
-            <script>
+            <p class="final-sms">¡HOY ES EL GRAN DÍA!💍💖</p>
+            <div class="NuestrosPadres">
+                <img src="resources/mordor.jpg" alt="Imagen de fondo">
+                <div class="nuestrosPadresTexto">
+                    <h2 id="subtitulo">Nuestros Padres</h2>
+                    <h3>NOVIA</h3>
+                    <p>Teresa del Carmen Osuna Lejarza<br>Jesús Gonzalez
+                        Jimenez</p>
+                    <h3>NOVIO</h3>
+                    <p>Maria Guadalupe Olivera Virrueta<br>Jorge Luis Magaña
+                        García</p>
+                </div>
+            </div>
+            <p id="frase">"Aunque todos los peligros me acechen,
+                mi destino está ligado al tuyo, y mis pasos siempre
+                buscarán el camino que me lleve de vuelta a tu lado."
+                <br>―Beren</p>
+            <div class="ceremonia">
+                <h2 id="subtitulo">Ceremonia</h2>
+                <div class="slider-container">
+                    <div class="slide">
+                        <div class="item"
+                            style="background-image: url(./Salon/img1.jpeg);">
+                            <div class="content">
+                                <div class="name"><p id="nombreLugar">ROSA <br>
+                                        MORADA</p></div>
+                                <div class="des"><p id="lugar">Bosque de la
+                                        <br> Primavera, Jal.</p>
+                                </div>
+                                <button type="button" id="mapa"
+                                    onclick="verMapa()">
+                                    <i class="fa-solid fa-map-location-dot"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="item"
+                            style="background-image: url(./Salon/img2.jpeg);"></div>
+                        <div class="item"
+                            style="background-image: url(./Salon/img3.jpeg);"></div>
+                        <div class="item"
+                            style="background-image: url(./Salon/img4.jpeg);"></div>
+                        <div class="item"
+                            style="background-image: url(./Salon/img5.jpeg);"></div>
+                    </div>
+                </div>
+                <script>
                 function verMapa() {
                     window.location.href = "https://www.google.com/maps/place/Rosa+Morada+128/@20.7231732,-103.5254759,17z/data=!3m1!4b1!4m6!3m5!1s0x8428a958a7dcc2bd:0xebcf563352ac3c21!8m2!3d20.7231682!4d-103.522901!16s%2Fg%2F11s69br4zm?entry=ttu&g_ep=EgoyMDI1MDgyNS4wIKXMDSoASAFQAw%3D%3D";
                 }
             </script>
-        </div>
-        <div>
-            <h2 id="subtitulo">Invitado de honor</h2>
-            <div class="sparky">
-                <img src="resources/sparky.jpg" alt="Imagen de fondo">
-                <div class="sparkyText">
+            </div>
+            <div>
+                <h2 id="subtitulo">Invitado de honor</h2>
+                <div class="sparky">
+                    <img src="resources/sparky.jpg" alt="Imagen de fondo">
+                </div>
+                <div>
                     <h4>Sparky</h4>
+                    <p>Ninguna gran historia de la Tierra Media está completa
+                        sin un guardián leal.
+                        Sparky ha sido nuestro fiel compañero de camino y ha
+                        custodiado nuestra historia
+                        desde el principio.
+                        <br>Es nuestro deseo que nos acompañe en este gran día;
+                        les
+                        pedimos recibir su noble presencia con amor y amabilidad
+                        en su paso por el banquete</p>
                 </div>
             </div>
-            <p>Ninguna gran historia de la Tierra Media está completa sin un guardián leal. 
-                Sparky ha sido nuestro fiel compañero de camino y ha custodiado nuestra historia 
-                desde el principio. Es nuestro deseo que nos acompañe en este gran día; les 
-                pedimos recibir su noble presencia con amor y amabilidad en su paso por el banquete</p>
-        </div>
-        <div>
-            <h2 id="subtitulo">Damas de Honor</h2>  
-            <h4>
-                Emelyn Lamas Solis 
-                <br>Ivón Guerra Zarco 
-                <br>Iriana Magaña Olivera 
-                <br>Lizbeth Magaña Olivera 
-                <br>María del Carmen Ramirez Rosales 
-                <br>María José López Ángeles
-            </h4>
-        </div>
-                
-        <div class="itinerario">
-            <h2 id="subtitulo"> Itinerario</h2>
-            <img src="/resources/itinerario.png" alt="Itinerario" class='itinerario'>
-        </div>
-        <p>Compartir este día con ustedes es el mayor tesoro que podríamos desear. 
-            No obstante, si desean honrar nuestra unión con algún obsequio, sabremos 
-            apreciar con el corazón cada detalle que decidan brindarnos para nuestra futura travesía.</p>
-        <div class="mesaRegalos">
-            <h2 id="subtitulo">Mesa de Regalos</h2>
-            <button type="button" id="mesaRegalos__boton" onclick="verMesa()">
-                <i class="fa-solid fa-gift"></i>
-            </button>
-            <script>
+            <div class="contenedor-damas">
+                <h2 id="subtitulo">Damas de Honor</h2>
+                <div class="divisor-medieval">✦ ⚜ ✦</div>
+
+                <ul class="lista-damas">
+                    <h4> Carmen Ramirez Rosales ✦
+                    <br>✦ Emelyn Lamas Solis 
+                    <br> Ivón Guerra Zarco ✦
+                    <br>✦ Iriana Magaña Olivera 
+                    <br> Lizbeth Magaña Olivera ✦</h4>
+                </ul>
+            </div>
+
+            <div class="itinerario-tierra-media">
+                <div class="encabezado">
+                    <h2>A long expected Wedding</h2>
+                    <p>Un día para Recordar</p>
+                </div>
+
+                <div class="linea-tiempo">
+                    <!-- Evento 1 -->
+                    <div class="evento">
+                        <div class="hora">3:15 PM</div>
+                        <div class="tarjeta">
+                            <h3>Ceremonia Civil</h3>
+                            <p>El Inicio del Viaje</p>
+                        </div>
+                    </div>
+
+                    <!-- Evento 2 -->
+                    <div class="evento">
+                        <div class="hora">4:30 PM</div>
+                        <div class="tarjeta">
+                            <h3>Bienvenida</h3>
+                            <p>Reunión de la Comunidad</p>
+                        </div>
+                    </div>
+
+                    <!-- Evento 3 -->
+                    <div class="evento">
+                        <div class="hora">5:00 PM</div>
+                        <div class="tarjeta">
+                            <h3>Charcutería</h3>
+                            <p>Provisiones del Camino</p>
+                        </div>
+                    </div>
+
+                    <!-- Evento 4 -->
+                    <div class="evento">
+                        <div class="hora">5:40 PM</div>
+                        <div class="tarjeta">
+                            <h3>Banquete</h3>
+                            <p>El Gran Festín</p>
+                        </div>
+                    </div>
+
+                    <!-- Evento 5 -->
+                    <div class="evento">
+                        <div class="hora">7:00 PM</div>
+                        <div class="tarjeta">
+                            <h3>Primer baile</h3>
+                            <p>Bajo la Luz de las Estrellas</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p>Compartir este día con ustedes es el mayor tesoro que podríamos
+                desear.
+                No obstante, si desean honrar nuestra unión con algún obsequio,
+                sabremos
+                apreciar con el corazón cada detalle que decidan brindarnos para
+                nuestra futura travesía.</p>
+            <div class="mesaRegalos">
+                <h2 id="subtitulo">Mesa de Regalos</h2>
+                <button type="button" id="mesaRegalos__boton"
+                    onclick="verMesa()">
+                    <i class="fa-solid fa-gift"></i>
+                </button>
+                <script>
                 function verMesa() {
                     window.location.href = "https://www.amazon.com.mx/wedding/share/JenniferyJLuis";
                 }
             </script>
-        </div>
-        <div class="sobres">
-            <h2 id="subtitulo">Lluvia de sobres</h2>
-            <p>Si desean ayudarnos con un obsequio en efectivo, el día de la boda encontrarán un sobre especial a su llegada para colocar su presente.</p>
-        </div>
-        <div class="contenedorVestimenta">
-            <img src="/resources/img1.png" alt="Imagen de fondo">
-            <div class="codigoVestimenta">
-                <h2 id="subtitulo">Código de Vestimenta</h2>
-                <h3>Formal</h3>
-                <div class="paleteInvitados">
-                    <div class="circle color1"></div>
-                    <div class="circle color2"></div>
-                    <div class="circle color3"></div>
-                    <div class="circle color4"></div>
-                    <div class="circle color5"></div>
-                    <div class="circle color6"></div>
-                </div>
-                <h3> Damas de honor </h3>
-                <div class="paleteDamas">
-                    <div class="color-box color7"><p>Forest Green</p></div>
-                    <div class="color-box color8"><p>Drab</p></div>
-                    <div class="color-box color9"><p>Moss Green</p></div>
-                    <div class="color-box color10"><p>Cyspress</p></div>
-                </div>
-                
-                <h3>Niños: auténticos Hobbits (Sugerencia)</h3>
-                <div class="kids">
-                    <img src="/kids/img1.jpg" alt="Imagen 1">
-                    <img src="/kids/img2.jpg" alt="Imagen 2">
-                    <img src="/kids/img3.jpg" alt="Imagen 3">
-                    <img src="/kids/img4.jpg" alt="Imagen 4">
-                </div>
-                <div class="weddingDress">
-                    <img src="/resources/arwenyaragorn.png" alt="Aragorn y Arwen">
+            </div>
+            <div class="sobres">
+                <h2 id="subtitulo">Lluvia de sobres</h2>
+                <p>Si desean ayudarnos con un obsequio en efectivo, el día de la
+                    boda encontrarán un sobre especial a su llegada para colocar
+                    su presente.</p>
+            </div>
+            <div class="contenedorVestimenta">
+                <img src="/resources/img1.png" alt="Imagen de fondo">
+                <div class="codigoVestimenta">
+                    <h2 id="subtitulo">Código de Vestimenta</h2>
+                    <h3>Formal</h3>
+                    <div class="paleteInvitados">
+                        <div class="circle color1"></div>
+                        <div class="circle color2"></div>
+                        <div class="circle color3"></div>
+                        <div class="circle color4"></div>
+                        <div class="circle color5"></div>
+                        <div class="circle color6"></div>
+                    </div>
+                    <h3> Damas de honor </h3>
+                    <div class="paleteDamas">
+                        <div class="color-box color7"><p>Forest Green</p></div>
+                        <div class="color-box color8"><p>Drab</p></div>
+                        <div class="color-box color9"><p>Moss Green</p></div>
+                        <div class="color-box color10"><p>Cyspress</p></div>
+                    </div>
+
+                    <h3>Niños: auténticos Hobbits (Sugerencia)</h3>
+                    <div class="kids">
+                        <img src="/kids/img1.jpg" alt="Imagen 1">
+                        <img src="/kids/img2.jpg" alt="Imagen 2">
+                        <img src="/kids/img3.jpg" alt="Imagen 3">
+                        <img src="/kids/img4.jpg" alt="Imagen 4">
+                    </div>
+                    <div class="weddingDress">
+                        <img src="/resources/arwenyaragorn.png"
+                            alt="Aragorn y Arwen">
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="sugerencias-msj">
-            <p>Las vestiduras blancas, marfiles y de luz pura quedan reservadas únicamente para la novia. Les invitamos a adornar el banquete con ropajes de los hermosos colores del bosque, la tierra o el cielo invernal.</p>
-            <p>A los pequeños medianos que asistan al banquete luciendo su capa, se les otorgará un broche con la Hoja de Lórien, como símbolo de su valentía</p>
-        </div>
-        <div class="sugerencia-vestimenta">
-            <p>Nuestra unión se celebrará bajo el cielo abierto. Los vientos de diciembre suelen ser gélidos, por lo que hemos decidido reunirnos a la luz del día para aprovechar la calidez del sol. Les sugerimos vestir de manera formal, pero abrigada (capas, abrigos y calzado cómodo para el terreno son más que bienvenidos).</p>
-        </div>
-        <div class="dots-memories">
-            <p>¡Comparte tus recuerdos! </p>
-            <p>Descarga Dot Memories aquí:</p>
-            <button type="button" id="app__boton" onclick="verApp()">
-                <i class="fa-solid fa-download"></i>
-            </button>
-            <script>
+            <div class="sugerencias-msj">
+                <p>Las vestiduras blancas, marfiles y de luz pura quedan
+                    reservadas únicamente para la novia. Les invitamos a adornar
+                    el banquete con ropajes de los hermosos colores del bosque,
+                    la tierra o el cielo invernal.</p>
+                <p>A los pequeños medianos que asistan al banquete luciendo su
+                    capa, se les otorgará un broche con la Hoja de Lórien, como
+                    símbolo de su valentía</p>
+            </div>
+            <div class="sugerencia-vestimenta">
+                <p>Nuestra unión se celebrará bajo el cielo abierto. Los vientos
+                    de diciembre suelen ser gélidos, por lo que hemos decidido
+                    reunirnos a la luz del día para aprovechar la calidez del
+                    sol. Les sugerimos vestir de manera formal, pero abrigada
+                    (capas, abrigos y calzado cómodo para el terreno son más que
+                    bienvenidos).</p>
+            </div>
+            <div class="dots-memories">
+                <p>¡Comparte tus recuerdos! </p>
+                <p>Descarga Dot Memories aquí:</p>
+                <button type="button" id="app__boton" onclick="verApp()">
+                    <i class="fa-solid fa-download"></i>
+                </button>
+                <script>
                 function verApp() {
                 window.location.href = "https://play.google.com/store/apps/details?id=social.onelife&hl=es/";
                 }
             </script>
-            <img src="/resources/dots-memories.png"/>
-            <p>Escanea el código o da clic en el link y sube las fotos que captures el gran día </p>
-            <button type="button" id="app__boton" onclick="verApp()">
-                <i class="fa-solid fa-link"></i></button>
+                <img src="/resources/dots-memories.png" />
+                <p>Escanea el código o da clic en el link y sube las fotos que
+                    captures el gran día </p>
+                <button type="button" id="app__boton" onclick="verApp()">
+                    <i class="fa-solid fa-link"></i></button>
             </button>
             <script>
                 function verApp() {
@@ -306,57 +413,72 @@
         </div>
         <div class="msj-goodbye">
             <p id="frase">
-                El viaje más hermoso es aquel que nos lleva de vuelta al hogar, y nuestro hogar comienza aquí. 
-                No hay mayor fortuna en esta tierra que iniciar el camino al lado de las almas leales que amamos. 
+                El viaje más hermoso es aquel que nos lleva de vuelta al hogar,
+                y nuestro hogar comienza aquí.
+                No hay mayor fortuna en esta tierra que iniciar el camino al
+                lado de las almas leales que amamos.
                 <br> ¡Los esperamos!
             </p>
 
         </div>
         <div class="confirmar">
             <h2 id="subtitulo">¡Confirma tu Asistencia!</h2>
-            <form method="post" action="" name="contact-form">
+            <form method="post" action name="contact-form">
                 <p>Favor de confirmar asistencia por persona</p>
-                <input type="text" id="nombre" name="Nombre" placeholder="Ingresa tu Nombre"/>
-                <input type="text" id="apellido" name="Apellido" placeholder="Ingresa tu Apellido"required/>
+                <input type="text" id="nombre" name="Nombre"
+                    placeholder="Ingresa tu Nombre" />
+                <input type="text" id="apellido" name="Apellido"
+                    placeholder="Ingresa tu Apellido" required />
                 <input type="hidden" id="asistencia" name="Asistencia" />
                 <table class="tabla__botones">
                     <tr>
-                        <th><button type="button" id="btn-si" onclick="seleccionarAsistencia('SÍ, asistiré')"><p>SÍ, asistiré</p></button></th>
-                        <th><button type="button" id="btn-no" onclick="seleccionarAsistencia('NO asistiré')"><p>NO asistiré</p></button></th>
-                        <th><button type="submit" id="submit"><i class="fa-solid fa-paper-plane"></i></button></th>
+                        <th><button type="button" id="btn-si"
+                                onclick="seleccionarAsistencia('SÍ, asistiré')"><p>SÍ,
+                                    asistiré</p></button></th>
+                        <th><button type="button" id="btn-no"
+                                onclick="seleccionarAsistencia('NO asistiré')"><p>NO
+                                    asistiré</p></button></th>
+                        <th><button type="submit" id="submit"><i
+                                    class="fa-solid fa-paper-plane"></i></button></th>
                     </tr>
                 </table>
             </form>
         </div>
-        <div class=sugerenciasHospedaje>     
+        <div class=sugerenciasHospedaje>
             <h2 id="subtitulo">Sugerencias de hospedaje</h2>
             <h3>City Express Aeropuerto</h3>
-            <button type="button" id="hospedaje" onclick="verHospedaje1()"><p>Reservar</p></button>
+            <button type="button" id="hospedaje"
+                onclick="verHospedaje1()"><p>Reservar</p></button>
             <script>
                 function verHospedaje1() {
                     window.location.href = "https://www.marriott.com/en-us/hotels/gdlxo-city-express-guadalajara-aeropuerto/overview/";   
                 }        
             </script>
             <h3>Holiday Inn Express Guadalajara Vallarta Poniente</h3>
-            <button type="button" id="hospedaje" onclick="verHospedaje3()"><p>Reservar</p></button>
+            <button type="button" id="hospedaje"
+                onclick="verHospedaje3()"><p>Reservar</p></button>
             <script>
                 function verHospedaje3() {
-                    window.location.href = "https://www.booking.com/hotel/mx/holiday-inn-express-guadalajara-vallarta-poniente-an-ihg.en-gb.html?aid=1288313&label=metagha-link-MRMX-hotel-9222708_dev-desktop_los-1_bw-12_dow-Sunday_defdate-1_room-0_gstadt-2_rateid-0_aud-0_gacid-21415144282_mcid-10_ppa-0_clrid-0_ad-1_gstkid-0_checkin-20260517_ppt-_lp-2484_r-6168110202186442130&sid=e9273032784c24d7cc76d8d0eff19fea&all_sr_blocks=922270803_363928807_2_1_0&checkin=2026-05-17&checkout=2026-05-18&dest_id=9222708&dest_type=hotel&dist=0&group_adults=2&group_children=0&hapos=1&highlighted_blocks=922270803_363928807_2_1_0&hpos=1&matching_block_id=922270803_363928807_2_1_0&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&sr_pri_blocks=922270803_363928807_2_1_0__170000&srepoch=1777992629&srpvid=e2116858ac7d038c&type=total&ucfs=1&";"
-            </script> 
+                    window.location.href = "https://www.booking.com/hotel/mx/holiday-inn-express-guadalajara-vallarta-poniente-an-ihg.en-gb.html?aid=1288313&label=metagha-link-MRMX-hotel-9222708_dev-desktop_los-1_bw-12_dow-Sunday_defdate-1_room-0_gstadt-2_rateid-0_aud-0_gacid-21415144282_mcid-10_ppa-0_clrid-0_ad-1_gstkid-0_checkin-20260517_ppt-_lp-2484_r-6168110202186442130&sid=e9273032784c24d7cc76d8d0eff19fea&all_sr_blocks=922270803_363928807_2_1_0&checkin=2026-05-17&checkout=2026-05-18&dest_id=9222708&dest_type=hotel&dist=0&group_adults=2&group_children=0&hapos=1&highlighted_blocks=922270803_363928807_2_1_0&hpos=1&matching_block_id=922270803_363928807_2_1_0&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&sr_pri_blocks=922270803_363928807_2_1_0__170000&srepoch=1777992629&srpvid=e2116858ac7d038c&type=total&ucfs=1&";
+                }
+            </script>
             <h3>Airbnb - Loft del bosque</h3>
-            <button type="button" id="hospedaje" onclick="verHospedaje4()"><p>Reservar</p></button>
+            <button type="button" id="hospedaje"
+                onclick="verHospedaje4()"><p>Reservar</p></button>
             <script>
                 function verHospedaje4() {
                     window.location.href = "https://www.airbnb.mx/rooms/1188462956157895488?check_in=2026-12-27&check_out=2026-12-28&search_mode=regular_search&source_impression_id=p3_1777993367_P3_7qsu7NH1Lwhn_&previous_page_section_name=1000&federated_search_id=0b13002c-fe3c-4918-a9cc-35e5092bb7af"
                 }
-            </script> 
+            </script>
         </div>
         <footer>
             <div class="footerContainer">
                 <img src="/resources/forestfooter.png" alt="Imagen de fondo">
                 <div class="piePagina">
-                    <a href="#titulo"><div class="foot"><i class="fa-solid fa-house"></i> Ir al comienzo</div></a>                       
-                    <div class="piePaginaText">Boda J&JL</div> 
+                    <a href="#titulo"><div class="foot"><i
+                                class="fa-solid fa-house"></i> Ir al
+                            comienzo</div></a>
+                    <div class="piePaginaText">Boda J&JL</div>
                 </div>
             </div>
         </footer>
