@@ -106,46 +106,153 @@
                     <label for="radio4" class="manual-btn"></label>
                 </div>
                 <script>
-                    const radios = document.querySelectorAll('input[name="radio-btn"]');
-                    const manualBtns = document.querySelectorAll('.manual-btn'); // Botones manuales
-                    let counter = 1;
-                
-                    // Cambia la imagen automáticamente cada 5 segundos
-                    const changeSlide = () => {
-                        document.getElementById('radio' + counter).checked = true;
-                        updateManualButtons(counter); // Actualiza los botones manuales
-                        counter++;
-                        if (counter > 4) counter = 1;
-                    };
-                
-                    // Inicia la auto-navegación
-                    let slideInterval = setInterval(changeSlide, 5000);
-                
-                    // Función para iluminar el botón correcto
-                    const updateManualButtons = (activeIndex) => {
-                        manualBtns.forEach((btn, index) => {
-                            if (index === activeIndex - 1) {
-                                btn.style.background = "#fff"; // Cambia el fondo del botón activo
-                            } else {
-                                btn.style.background = "rgba(0, 0, 0, 0.5)"; // Fondo para botones inactivos
-                            }
-                        });
-                    };
-                
-                    // Manejo de clics manuales (sincroniza la navegación automática)
-                    radios.forEach((radio, index) => {
-                        radio.addEventListener('change', () => {
-                            clearInterval(slideInterval); // Detener la auto-navegación al hacer clic
-                            counter = index + 1; // Sincroniza el contador
-                            updateManualButtons(counter); // Actualiza los botones manuales
-                            slideInterval = setInterval(changeSlide, 5000); // Reinicia la auto-navegación
-                        });
-                    });
-                
-                    // Inicializar los botones manuales
-                    updateManualButtons(counter); // Asegura que el primer botón esté iluminado al cargar
-                </script>
+    const radios = document.querySelectorAll('input[name="radio-btn"]');
+    const manualBtns = document.querySelectorAll('.manual-btn'); 
+    const sliderContainer = document.querySelector('.sliderCarrusel'); // Contenedor para detectar el toque/arrastre
+    
+    let counter = 1;
+    let direction = 1; 
 
+    // Función para iluminar el botón inferior correcto
+    const updateManualButtons = (activeIndex) => {
+        manualBtns.forEach((btn, index) => {
+            if (index === activeIndex - 1) {
+                btn.style.background = "#fff"; 
+            } else {
+                btn.style.background = "rgba(0, 0, 0, 0.5)"; 
+            }
+        });
+    };
+
+    // Cambia la imagen automáticamente
+    const changeSlide = () => {
+        counter += direction;
+
+        if (counter >= 4) {
+            counter = 4;
+            direction = -1;
+        } else if (counter <= 1) {
+            counter = 1;
+            direction = 1;
+        }
+
+        document.getElementById('radio' + counter).checked = true;
+        updateManualButtons(counter); 
+    };
+
+    // Asegurarnos de que el primer botón esté encendido al cargar
+    document.getElementById('radio1').checked = true;
+    updateManualButtons(counter); 
+    
+    // Inicia la auto-navegación
+    let slideInterval = setInterval(changeSlide, 5000);
+
+    // FUNCIÓN: Mover el carrusel al deslizar
+    const moverCarrusel = (paso) => {
+        clearInterval(slideInterval); 
+        counter += paso;
+
+        // Mantenemos la lógica de rebote (ping-pong)
+        if (counter > 4) {
+            counter = 1; 
+            direction = 1; 
+        } else if (counter < 1) {
+            counter = 4;
+            direction = -1; 
+        } else {
+            direction = paso > 0 ? 1 : -1;
+        }
+
+        document.getElementById('radio' + counter).checked = true;
+        updateManualButtons(counter);
+        slideInterval = setInterval(changeSlide, 5000); 
+    };
+
+    // ==========================================
+    // LÓGICA DE ARRASTRE Y TOQUE (SWIPE)
+    // ==========================================
+    let startX = 0;
+    let currentX = 0;
+    let isDragging = false;
+
+    // --- Para Celulares (Touch) ---
+    sliderContainer.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+        isDragging = true;
+    }, { passive: true });
+
+    sliderContainer.addEventListener('touchmove', (e) => {
+        if (!isDragging) return;
+        currentX = e.touches[0].clientX;
+    }, { passive: true });
+
+    sliderContainer.addEventListener('touchend', () => {
+        if (!isDragging) return;
+        isDragging = false;
+        
+        const diffX = startX - currentX;
+        
+        // Si el usuario deslizó más de 50 píxeles, cambiamos de foto
+        if (Math.abs(diffX) > 50) {
+            if (diffX > 0) {
+                moverCarrusel(1); // Deslizó a la izquierda (siguiente foto)
+            } else {
+                moverCarrusel(-1); // Deslizó a la derecha (foto anterior)
+            }
+        }
+    });
+
+    // --- Para Computadoras (Mouse) ---
+    sliderContainer.addEventListener('mousedown', (e) => {
+        startX = e.clientX;
+        isDragging = true;
+        e.preventDefault(); // Evita que el navegador intente arrastrar la imagen fantasma
+    });
+
+    sliderContainer.addEventListener('mousemove', (e) => {
+        if (!isDragging) return;
+        currentX = e.clientX;
+    });
+
+    sliderContainer.addEventListener('mouseup', () => {
+        if (!isDragging) return;
+        isDragging = false;
+        
+        const diffX = startX - currentX;
+        
+        if (Math.abs(diffX) > 50) {
+            if (diffX > 0) {
+                moverCarrusel(1); 
+            } else {
+                moverCarrusel(-1); 
+            }
+        }
+    });
+
+    sliderContainer.addEventListener('mouseleave', () => {
+        isDragging = false; // Cancela el arrastre si el mouse sale de la foto
+    });
+    radios.forEach((radio, index) => {
+        radio.addEventListener('change', () => {
+            clearInterval(slideInterval); 
+            
+            let nuevoCounter = index + 1;
+
+            if (nuevoCounter > counter) {
+                direction = 1;
+            } else if (nuevoCounter < counter) {
+                direction = -1;
+            }
+            
+            if (nuevoCounter === 4) direction = -1;
+            if (nuevoCounter === 1) direction = 1;
+
+            counter = nuevoCounter; 
+            updateManualButtons(counter); 
+            slideInterval = setInterval(changeSlide, 5000); 
+        });
+    });
+</script>
             </div>
             <div class="dots-memories">
                 <img src="/resources/J&JL.png" />
@@ -257,7 +364,9 @@
                         <br> Lizbeth Magaña Olivera ✦</h4>
                 </ul>
             </div>
-
+            <div>
+                <h2 id="subtitulo">Itinerario</h2>
+            </div>
             <div class="itinerario-tierra-media">
                 <div class="encabezado">
                     <h2>A long expected Wedding</h2>
@@ -398,8 +507,7 @@
                 window.location.href = "https://play.google.com/store/apps/details?id=social.onelife&hl=es/";
                 }
             </script>
-                <img src="/resources/dots-memories.png" />
-                <p>Escanea el código o da clic en el link y sube las fotos que
+                <p>Da clic en el link y sube las fotos que
                     captures el gran día </p>
                 <button type="button" id="app__boton" onclick="verApp()">
                     <i class="fa-solid fa-link"></i></button>
@@ -469,6 +577,73 @@
                     window.location.href = "https://www.airbnb.mx/rooms/1188462956157895488?check_in=2026-12-27&check_out=2026-12-28&search_mode=regular_search&source_impression_id=p3_1777993367_P3_7qsu7NH1Lwhn_&previous_page_section_name=1000&federated_search_id=0b13002c-fe3c-4918-a9cc-35e5092bb7af"
                 }
             </script>
+        </div>
+        
+        <div class="galeria-pinterest">
+            <!-- Foto 1 -->
+            <div class="item-galeria">
+                <img src="/sesion/img5.jpg" alt="Recuerdo 1">
+            </div>
+
+            <!-- Foto 2 -->
+            <div class="item-galeria">
+                <img src="/sesion/img6.jpg" alt="Recuerdo 2">
+            </div>
+
+            <!-- Foto 3 -->
+            <div class="item-galeria">
+                <img src="/sesion/img7.jpg" alt="Recuerdo 3">
+            </div>
+
+            <!-- Foto 4 -->
+            <div class="item-galeria">
+                <img src="/sesion/img8.jpg" alt="Recuerdo 4">
+            </div>
+
+            <div class="item-galeria">
+                <img src="/sesion/Sesión-4.jpg" alt="Recuerdo 4">
+            </div>
+
+            <div class="item-galeria">
+                <img src="/sesion/Sesión-10.jpg" alt="Recuerdo 4">
+            </div>
+
+            <div class="item-galeria">
+                <img src="/sesion/Sesión-22.jpg" alt="Recuerdo 4">
+            </div>
+
+            <div class="item-galeria">
+                <img src="/sesion/Sesión-26.jpg" alt="Recuerdo 4">
+            </div>
+
+            <div class="item-galeria">
+                <img src="/sesion/Sesión-31.jpg" alt="Recuerdo 4">
+            </div>
+
+            <div class="item-galeria">
+                <img src="/sesion/Sesión-32.jpg" alt="Recuerdo 4">
+            </div>
+
+            <div class="item-galeria">
+                <img src="/sesion/Sesión-53.jpg" alt="Recuerdo 4">
+            </div>
+
+            <div class="item-galeria">
+                <img src="/sesion/Sesión-60.jpg" alt="Recuerdo 4">
+            </div>
+
+            <div class="item-galeria">
+                <img src="/sesion/Sesión-67.jpg" alt="Recuerdo 4">
+            </div>
+
+            <div class="item-galeria">
+                <img src="/sesion/Sesión-75.jpg" alt="Recuerdo 4">
+            </div>
+
+            <div class="item-galeria">
+                <img src="/sesion/Sesión-95.jpg" alt="Recuerdo 4">
+            </div>
+
         </div>
         <footer>
             <div class="footerContainer">

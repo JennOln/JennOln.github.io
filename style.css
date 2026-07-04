@@ -1,19 +1,19 @@
-
 .resolucion {
     width: 99%;
     justify-content: center;
     text-align: center;
-    align-items: center; 
+    align-items: center;
 }
 
 
 body {
-    background-color:rgb(254, 254, 255);
+    background-color: rgb(254, 254, 255);
 }
-.Encabezado{
-    background-image: url('/resources/head.jpg'); 
-    background-size: cover; 
-    background-position: center; 
+
+.Encabezado {
+    background-image: url('/resources/head.jpg');
+    background-size: cover;
+    background-position: center;
     height: 1030px;
 }
 
@@ -32,26 +32,38 @@ body {
 /* Barra de progreso en la parte superior */
 /* Estilos generales del slider */
 .progress-bar {
-    -webkit-appearance: none; /* Elimina el estilo predeterminado del slider */
+    -webkit-appearance: none;
+    /* Elimina el estilo predeterminado del slider */
     appearance: none;
     width: 100%;
-    height: 5px; /* El grosor de la barra */
-    background: #ffffffb7; /* Color de fondo de la barra */
-    border-radius: 5px; /* Opcional: redondea los bordes de la barra */
+    height: 5px;
+    /* El grosor de la barra */
+    background: #ffffffb7;
+    /* Color de fondo de la barra */
+    border-radius: 5px;
+    /* Opcional: redondea los bordes de la barra */
     transition: background 0.3s ease;
 }
 
 /* Estilos para el thumb (el punto que se mueve) */
 .progress-bar::-webkit-slider-thumb {
-    -webkit-appearance: none; /* Elimina el estilo predeterminado */
+    -webkit-appearance: none;
+    /* Elimina el estilo predeterminado */
     appearance: none;
-    width: 25px; /* Ancho del thumb */
-    height: 25px; /* Alto del thumb */
-    border-radius: 50%; /* Hace que el thumb sea circular */
-    background-image: url('resources/progress_bar.png'); /* Aquí agregas la imagen que reemplaza el punto */
-    background-size: cover; /* Hace que la imagen cubra el tamaño del thumb */
-    cursor: pointer; /* Cambia el cursor al pasar sobre el thumb */
-    border: none; /* Elimina el borde predeterminado */
+    width: 25px;
+    /* Ancho del thumb */
+    height: 25px;
+    /* Alto del thumb */
+    border-radius: 50%;
+    /* Hace que el thumb sea circular */
+    background-image: url('resources/progress_bar.png');
+    /* Aquí agregas la imagen que reemplaza el punto */
+    background-size: cover;
+    /* Hace que la imagen cubra el tamaño del thumb */
+    cursor: pointer;
+    /* Cambia el cursor al pasar sobre el thumb */
+    border: none;
+    /* Elimina el borde predeterminado */
 }
 
 /* Estilo para otros navegadores que soportan pseudo-elementos */
@@ -59,7 +71,8 @@ body {
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    background-image: url('resources/progress_bar.png'); /* Aquí agregas la imagen */
+    background-image: url('resources/progress_bar.png');
+    /* Aquí agregas la imagen */
     background-size: cover;
     border: none;
     cursor: pointer;
@@ -76,24 +89,30 @@ body {
 /* Estilos para el botón de play/pause en la parte inferior */
 .play-pause {
     background: none;
-    border: 2px solid rgb(13, 100, 64); /* El borde del círculo */
-    border-radius: 50%; /* Hace que el borde sea circular */
-    width: 60px; /* Tamaño del círculo */
-    height: 60px; /* Tamaño del círculo */
+    border: 2px solid rgb(13, 100, 64);
+    /* El borde del círculo */
+    border-radius: 50%;
+    /* Hace que el borde sea circular */
+    width: 60px;
+    /* Tamaño del círculo */
+    height: 60px;
+    /* Tamaño del círculo */
     font-size: 25px;
     margin-top: 10px;
     color: rgb(13, 100, 64);
     cursor: pointer;
     display: flex;
     justify-content: center;
-    align-items: center; /* Centra el icono dentro del círculo */
+    align-items: center;
+    /* Centra el icono dentro del círculo */
     transition: color 0.3s ease, border-color 0.3s ease;
 }
 
 /* Hover para el botón */
 .play-pause:hover {
     color: rgb(13, 100, 64);
-    border-color: rgb(13, 100, 64); /* Cambia el borde al hacer hover */
+    border-color: rgb(13, 100, 64);
+    /* Cambia el borde al hacer hover */
 }
 
 
@@ -103,32 +122,34 @@ body {
     text-shadow: 3px 3px rgb(44, 37, 28);
 }
 
-#frase { 
-    color:rgb(109, 89, 64);
+#frase {
+    color: rgb(109, 89, 64);
     font-family: Great Vibes;
     font-size: 28px;
     margin-top: 180px;
     margin-bottom: 180px;
 }
 
-h1{
+h1 {
     font-family: "The Nautigal", serif;
     font-size: 7rem;
 }
 
-#nuestraBoda{
-    margin-top: 450px; /* Regresar a 250 si no funciona */
+#nuestraBoda {
+    margin-top: 450px;
+    /* Regresar a 250 si no funciona */
     color: beige;
 }
 
-#subtitulo{
+#subtitulo {
     color: rgb(77, 61, 43);
     text-align: center;
 }
-h2{ 
+
+h2 {
     font-family: 'Ringbearer', sans-serif;
     font-size: 2.3rem;
-    
+
 }
 
 p {
@@ -137,44 +158,56 @@ p {
     font-size: 20px;
     text-align: center;
     display: flex;
-    justify-content: center; /* Centrar horizontalmente */
-    align-items: center;    /* Centrar verticalmente */
-    overflow: hidden;       /* Oculta contenido fuera del contenedor */
-    transform: translateY(100px);           /* Comienza fuera de la vista */
-    opacity: 0;                             /* Invisible inicialmente */
+    justify-content: center;
+    /* Centrar horizontalmente */
+    align-items: center;
+    /* Centrar verticalmente */
+    overflow: hidden;
+    /* Oculta contenido fuera del contenedor */
+    transform: translateY(100px);
+    /* Comienza fuera de la vista */
+    opacity: 0;
+    /* Invisible inicialmente */
 }
 
-h3{
+h3 {
     font-family: Metamorphous;
     font-size: 1.5rem;
     padding: 20px;
     text-align: center;
-    justify-content: center; /* Centrar horizontalmente */
-    align-items: center;    /* Centrar verticalmente */
-    overflow: hidden;       /* Oculta contenido fuera del contenedor */
-    transform: translateY(100px);           /* Comienza fuera de la vista */
-    opacity: 0;                             /* Invisible inicialmente */
+    justify-content: center;
+    /* Centrar horizontalmente */
+    align-items: center;
+    /* Centrar verticalmente */
+    overflow: hidden;
+    /* Oculta contenido fuera del contenedor */
+    transform: translateY(100px);
+    /* Comienza fuera de la vista */
+    opacity: 0;
+    /* Invisible inicialmente */
 }
-h4{
-    font-size: 3rem;
+
+h4 {
+    font-size: 2rem;
     font-family: "The Nautigal", serif;
     text-align: center;
     color: rgb(13, 100, 64);
 }
 
 /** Propiedades de FOTOS  **/
-.evento .titulo .frase{
+.evento .titulo .frase {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-.titulo { 
-    margin-top: -100px; /* Elimina cualquier margen superior si lo hay */
+.titulo {
+    margin-top: -100px;
+    /* Elimina cualquier margen superior si lo hay */
 }
 
-.savethedate{
+.savethedate {
     font-family: "UnifrakturCook", serif;
     font-weight: 700;
     font-style: normal;
@@ -182,20 +215,24 @@ h4{
     margin-top: -40px;
 }
 
-.fecha{
+.fecha {
     text-align: center;
-    justify-content: center;    
+    justify-content: center;
 }
 
 
 /** SLIDER DE SESION DE FOTOS**/
-.sliderCarrusel{
-    width: 90%; /* O el ancho que desees */
-    margin: 0 auto; /* Esto lo centra */
+.sliderCarrusel {
+    width: 90%;
+    /* O el ancho que desees */
+    margin: 0 auto;
+    /* Esto lo centra */
     height: calc(100vh - 20px);
     overflow: hidden;
-    border-radius: 1000px; /* Opcional: redondea las esquinas */
-    box-sizing: border-box; /* Asegúrate de que el padding no altere las dimensiones */
+    border-radius: 1000px;
+    /* Opcional: redondea las esquinas */
+    box-sizing: border-box;
+    /* Asegúrate de que el padding no altere las dimensiones */
     position: relative;
     justify-content: center;
 }
@@ -206,25 +243,34 @@ h4{
 
 .slides {
     display: flex;
-    width: 500%; /* Suficiente para todas las imágenes */
-    height: 100%; /* Ajusta la altura al slider */
+    width: 500%;
+    /* Suficiente para todas las imágenes */
+    height: 100%;
+    /* Ajusta la altura al slider */
 }
 
 .slide {
-    width: 20%; /* Cada imagen ocupa 1/5 del contenedor */
-    height: 100%; /* Ajusta la altura al contenedor */
-    transition: 0.6s; /* Suaviza la transición */
+    width: 20%;
+    /* Cada imagen ocupa 1/5 del contenedor */
+    height: 100%;
+    /* Ajusta la altura al contenedor */
+    transition: 0.6s;
+    /* Suaviza la transición */
 }
 
 .slide img {
-    width: 100%; /* Imagen ocupa todo el ancho */
-    height: 100%; /* Imagen ocupa toda la altura */
-    object-fit: cover; /* Ajusta la imagen recortando para mantener la proporción */
+    width: 100%;
+    /* Imagen ocupa todo el ancho */
+    height: 100%;
+    /* Imagen ocupa toda la altura */
+    object-fit: cover;
+    /* Ajusta la imagen recortando para mantener la proporción */
 }
 
 .navigation-manual {
     position: absolute;
-    bottom: 50px; /* Ajustar la distancia de los botones de la parte inferior */
+    bottom: 50px;
+    /* Ajustar la distancia de los botones de la parte inferior */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -233,39 +279,41 @@ h4{
 }
 
 .manual-btn {
-    border: 2px solid #fff;
+    border: 2px solid #42301b;
     padding: 10px;
     border-radius: 50%;
     cursor: pointer;
     transition: 0.4s;
-    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    background: rgba(0, 0, 0, 0.5);
+    /* Fondo semitransparente */
 }
 
 .manual-btn:hover {
-    background: #fff;
+    background: rgb(13, 100, 64);
 }
+
 .manual-btn:not(:last-child) {
     margin-right: 40px;
 }
 
-#radio1:checked ~ .first {
+#radio1:checked~.first {
     margin-left: 0;
 }
 
-#radio2:checked ~ .first {
+#radio2:checked~.first {
     margin-left: -20%;
 }
 
-#radio3:checked ~ .first {
+#radio3:checked~.first {
     margin-left: -40%;
 }
 
-#radio4:checked ~ .first {
+#radio4:checked~.first {
     margin-left: -60%;
 }
 
 .navigation-auto div {
-    border: 2px solid #fff;
+    border: 2px solid rgb(13, 100, 64);
     padding: 5px;
     border-radius: 10px;
     transition: 0.4s;
@@ -275,26 +323,28 @@ h4{
     margin-right: 40px;
 }
 
-#radio1:checked ~ .navigation-auto .auto-btn1 {
-    background: #fff;
+#radio1:checked~.navigation-auto .auto-btn1 {
+    background: rgb(13, 100, 64);
 }
 
-#radio2:checked ~ .navigation-auto .auto-btn2 {
-    background: #fff;
+#radio2:checked~.navigation-auto .auto-btn2 {
+    background: rgb(13, 100, 64);
 }
 
-#radio3:checked ~ .navigation-auto .auto-btn3 {
-    background: #fff;
+#radio3:checked~.navigation-auto .auto-btn3 {
+    background: rgb(13, 100, 64);
 }
 
-#radio4:checked ~ .navigation-auto .auto-btn4 {
-    background: #fff;
+#radio4:checked~.navigation-auto .auto-btn4 {
+    background: rgb(13, 100, 64);
 }
+
 
 
 /** CONTADOR  **/
 .container__counter h3 {
-    margin-bottom: -65px; /* Ajusta este valor */
+    margin-bottom: -65px;
+    /* Ajusta este valor */
 }
 
 .container__counter {
@@ -302,7 +352,8 @@ h4{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    box-sizing: border-box; /*Asegura que el padding y el border se incluya en el ancho y alto total del contenedor*/
+    box-sizing: border-box;
+    /*Asegura que el padding y el border se incluya en el ancho y alto total del contenedor*/
 }
 
 #contador {
@@ -310,7 +361,8 @@ h4{
     justify-content: space-evenly;
     width: 100%;
     flex-wrap: wrap;
-    margin: 0 auto; /*Centra totalmente el contenedor*/
+    margin: 0 auto;
+    /*Centra totalmente el contenedor*/
     box-sizing: border-box;
 }
 
@@ -326,8 +378,9 @@ h6 {
     text-align: center;
     color: rgb(85, 102, 38);
     font-size: 20px;
-    margin-top: 100px; 
+    margin-top: 100px;
 }
+
 h5 {
     font-family: Cormorant Unicase;
     font-size: 25px;
@@ -343,7 +396,7 @@ h5 {
     margin-bottom: -110px;
 }
 
-span{
+span {
     display: block;
     padding: 5px;
     text-align: center;
@@ -372,14 +425,15 @@ span{
 }
 
 
-.sparky{
+.sparky {
     position: relative;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.sparky img{    
+
+.sparky img {
     border-radius: 50%;
     height: 400px;
     display: block;
@@ -387,33 +441,87 @@ span{
 
 
 /** GALERIA DE FOTOS DE NOVIOS**/
+/* Contenedor principal de la galería */
+.galeria-pinterest {
+    /* Define la cantidad de columnas para pantallas grandes */
+    column-count: 3;
+    /* Espacio entre las columnas */
+    column-gap: 15px; 
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
 
+/* Contenedor individual de cada foto */
+.item-galeria {
+    /* Esta propiedad es la magia: evita que la imagen se corte a la mitad entre dos columnas */
+    break-inside: avoid;
+    margin-bottom: 15px;
+    
+    /* Estética acorde a la temática (marcos elegantes) */
+    border: 2px solid #b89947; 
+    border-radius: 8px;
+    overflow: hidden; /* Asegura que la imagen respete los bordes curvos */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    background-color: #f4ecce; /* Fondo pergamino visible si la foto tarda en cargar */
+}
 
-.NuestrosPadres{
+/* Ajustes de la imagen */
+.item-galeria img {
+    width: 100%; /* Ocupa todo el ancho de su columna */
+    display: block;
+    transition: transform 0.4s ease; /* Transición suave para el efecto hover */
+}
+
+/* Efecto interactivo: ligero zoom al pasar el mouse */
+.item-galeria:hover img {
+    transform: scale(1.03);
+}
+
+/* ==========================================
+   DISEÑO RESPONSIVO (Adaptación a pantallas)
+   ========================================== */
+
+/* Tablets y pantallas medianas: Pasamos a 2 columnas */
+@media (max-width: 800px) {
+    .galeria-pinterest {
+        column-count: 2;
+    }
+}
+
+/* Celulares: Pasamos a 1 sola columna para que se vean grandes y claras */
+@media (max-width: 500px) {
+    .galeria-pinterest {
+        column-count: 1;
+    }
+}
+
+.NuestrosPadres {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
 }
-.NuestrosPadres img{
+
+.NuestrosPadres img {
     width: 100%;
     height: auto;
     opacity: 0.3;
     border-radius: 15px;
 }
 
-.nuestrosPadresTexto{
+.nuestrosPadresTexto {
     position: absolute;
     text-align: center;
 }
 
-.nuestrosPadresTexto h3{
+.nuestrosPadresTexto h3 {
     margin-bottom: -35px;
 }
 
 /*CODIGO DE VESTIMENTA*/
-.contenedorVestimenta{
+.contenedorVestimenta {
     position: relative;
     display: flex;
     justify-content: center;
@@ -421,86 +529,101 @@ span{
     width: auto;
 }
 
-.contenedorVestimenta img{
+.contenedorVestimenta img {
     width: 100%;
     height: 80%;
     opacity: 0.3;
     border-radius: 15px;
 }
-.codigoVestimenta{
+
+.codigoVestimenta {
     position: absolute;
     text-align: center;
     padding: 5px;
 }
+
 /*INVITADOS*/
-.paleteInvitados{
+.paleteInvitados {
     display: flex;
     gap: 10px;
     justify-content: center;
 }
 
-.circle{
+.circle {
     width: 50px;
     height: 50px;
     border-radius: 50%;
 }
 
-.paleteDamas{
-    display: grid; /* Activa el diseño de cuadrículo */
-    grid-template-columns: 100px 100px; /* 2 columnas de 150px cada una */
+.paleteDamas {
+    display: grid;
+    /* Activa el diseño de cuadrículo */
+    grid-template-columns: 100px 100px;
+    /* 2 columnas de 150px cada una */
     justify-content: center;
 }
 
-.color-box{
+.color-box {
     width: 100px;
     height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size:16 px;
+    font-size: 16 px;
     color: white;
     font-weight: bold;
     border-radius: 8px;
     text-align: center;
     box-shadow: 0 4px 6px rgb(0, 0, 0, 0.1);
 }
-.color1{
-    background-color: #c75c75; 
+
+.color1 {
+    background-color: #c75c75;
 }
-.color2{
+
+.color2 {
     background-color: #C2803A;
 }
-.color3{
+
+.color3 {
     background-color: #836539;
 }
-.color4{
+
+.color4 {
     background-color: #3d9bbb;
 }
-.color5{
+
+.color5 {
     background-color: #2F4D49;
 }
-.color6{
+
+.color6 {
     background-color: #181716;
 }
+
 /*DAMAS*/
-.color7{
+.color7 {
     background-color: #2B3E34;
 }
-.color8{
+
+.color8 {
     background-color: #546A50;
 }
-.color9{
+
+.color9 {
     background-color: #7e8a6d;
 }
-.color10{
+
+.color10 {
     background-color: #3f4e40;
 }
+
 /*NIÑOS*/
-.kids{
+.kids {
     text-align: center;
 }
 
-.kids img{
+.kids img {
     text-align: center;
     display: inline-block;
     border: 2px solid white;
@@ -510,17 +633,20 @@ span{
     opacity: 1;
 }
 
-.weddingDress img{
+.weddingDress img {
     text-align: center;
     width: auto;
     opacity: 1;
 }
+
 /*SLIDER DEL LUGAR*/
 .slider-container {
     position: relative;
     margin: 0 auto;
-    width: 80%;  /*ajustar al tamaño de la imagen */
-    height: 400px; /*ajustar al tamaño de la imagen */
+    width: 80%;
+    /*ajustar al tamaño de la imagen */
+    height: 400px;
+    /*ajustar al tamaño de la imagen */
     background: #f9f9f9;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
@@ -529,8 +655,10 @@ span{
 }
 
 .slider-container .slide .item {
-    width: 100px;  /* Ancho de los recuadros*/
-    height: 400px; /*Alto de los recuadros*/
+    width: 100px;
+    /* Ancho de los recuadros*/
+    height: 400px;
+    /*Alto de los recuadros*/
     position: absolute;
     top: 50%;
     transform: translate(0, -50%);
@@ -549,15 +677,15 @@ span{
     height: 100%;
 }
 
-.slide .item:nth-child(2)  {
+.slide .item:nth-child(2) {
     left: 50%;
 }
 
-.slide .item:nth-child(3)  {
+.slide .item:nth-child(3) {
     left: 60%;
 }
 
-.slide .item:nth-child(4)  {
+.slide .item:nth-child(4) {
     left: 70%;
 }
 
@@ -566,8 +694,8 @@ span{
 }
 
 #nombreLugar,
-#lugar{
-    color:white;
+#lugar {
+    color: white;
 }
 
 .content .name {
@@ -575,38 +703,39 @@ span{
     text-transform: uppercase;
     font-weight: bold;
 }
+
 .content .des {
     margin-top: 10px;
     margin-bottom: 20px;
 }
 
 
-.item .content{
+.item .content {
     position: absolute;
     top: 50%;
     left: 15px;
     width: 140px;
     text-align: left;
-    color:  beige;
+    color: beige;
     transform: translate(0, -50%);
 }
 
-.content .name{
+.content .name {
     font-size: 40 px;
     text-transform: uppercase;
     font-weight: bold;
     text-shadow: 2px 2px black;
 }
 
-.content .des{
+.content .des {
     margin-top: 10px;
     margin-bottom: 20px;
     text-shadow: 2px 2px black;
 }
 
-.content button{
+.content button {
     padding: 10px 62px;
-    border:none;
+    border: none;
     border-radius: 15px;
     cursor: pointer;
     color: beige;
@@ -616,25 +745,26 @@ span{
 
 /** BOTON DE MESA DE REGALOS Y APP**/
 .mesaRegalos,
-.dots-memories{
+.dots-memories {
     padding: 10px;
     text-align: center;
 }
 
-.dots-memories img{
+.dots-memories img {
     position: relative;
     width: 100%;
 }
 
 
- #mesaRegalos__boton,
- #app__boton{
+#mesaRegalos__boton,
+#app__boton {
     text-align: center;
     padding-top: 15px;
     padding-bottom: 15px;
     padding-left: 50px;
     padding-right: 50px;
-    background-color: rgb(163, 137, 113); /* Color del botón */
+    background-color: rgb(163, 137, 113);
+    /* Color del botón */
     color: black;
     border: none;
     border-radius: 15px;
@@ -642,19 +772,19 @@ span{
 }
 
 
-#mapa:hover, 
+#mapa:hover,
 #app__boton:hover,
-#mesaRegalos__boton:hover{
+#mesaRegalos__boton:hover {
     background-color: rgb(85, 102, 38);
     color: white;
     border-color: rgb(85, 102, 38);
 }
 
-#hospedaje:hover{
+#hospedaje:hover {
     background-image: url('./resources/hobbit.png');
 }
 
-#hospedaje{
+#hospedaje {
     background-color: #7e8a6d;
     height: 100px;
     width: 100px;
@@ -668,7 +798,7 @@ span{
 }
 
 /*FORMULARIO*/
-.confirmar{
+.confirmar {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -677,7 +807,7 @@ span{
 }
 
 #nombre,
-#apellido{
+#apellido {
     height: 35px;
     width: 270px;
     margin: 3px;
@@ -690,7 +820,7 @@ span{
     border-radius: 10px;
 }
 
-.tabla__botones{
+.tabla__botones {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -703,7 +833,7 @@ span{
 #submit {
     font-family: inherit;
     font-size: 18px;
-    background: linear-gradient(to bottom, rgb(163, 137, 113) 0%,rgb(136, 110, 86) 100%);
+    background: linear-gradient(to bottom, rgb(163, 137, 113) 0%, rgb(136, 110, 86) 100%);
     color: white;
     padding: 20px 12px;
     align-items: center;
@@ -714,11 +844,11 @@ span{
     transition: all 0.3s;
 }
 
-#submit:hover{
+#submit:hover {
     transform: translateY(-3px);
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
     padding: 10px;
-    background: linear-gradient(to bottom, #775a33 0%,#82a77b 100%);
+    background: linear-gradient(to bottom, #775a33 0%, #82a77b 100%);
     cursor: pointer;
 }
 
@@ -731,7 +861,8 @@ span{
     display: block;
     margin-left: 0.4em;
     transition: all 0.3s;
-  }
+}
+
 #submit svg {
     width: 18px;
     height: 18px;
@@ -756,19 +887,20 @@ span{
     width: 54px;
     height: 54px;
 }
+
 #submit:hover svg {
     width: 25px;
     height: 25px;
     margin-right: 5px;
     transform: rotate(45deg);
-} 
+}
 
-.sugerenciasHospedaje{
+.sugerenciasHospedaje {
     text-align: center;
 }
 
 /** BOTONES **/
-button{
+button {
     border-radius: 15px;
     transition: all 0.3s ease;
 }
@@ -781,7 +913,7 @@ button.seleccionado {
 }
 
 /** PIE DE PÁGINA**/
-#text{
+#text {
     padding: 5px 15px 15px 5px;
     background-color: beige;
     color: rgb(85, 102, 38);
@@ -796,66 +928,72 @@ button.seleccionado {
     font-size: 3rem;
 }
 
-.foot{
-    color:rgb(136, 110, 86);
+.foot {
+    color: rgb(136, 110, 86);
     font-size: 10px;
     text-shadow: 1px 1px black;
     margin: 40px 0px;
 }
 
-#prota{
+#prota {
     font-family: 'Ringbearer', sans-serif;
     color: rgb(245, 232, 220);
     font-size: 5rem;
 }
-a:visited{
-    color:rgb(77, 61, 43);
+
+a:visited {
+    color: rgb(77, 61, 43);
 }
 
-a:hover{
+a:hover {
     color: rgb(85, 102, 38);
 }
-.footerContainer img{
+
+.footerContainer img {
     width: 100%;
     opacity: 0.8;
     height: auto;
 }
-.sugerenciasHospedaje .confirmar{
+
+.sugerenciasHospedaje .confirmar {
     justify-content: center;
     align-items: center;
 }
 
-.footerContainer{
+.footerContainer {
     position: relative;
     display: flex;
     justify-content: center;
-    align-items:last baseline;
+    align-items: last baseline;
     width: 100%;
 }
-.piePagina{
+
+.piePagina {
     position: absolute;
     text-align: center;
 }
 
-.piePaginaText{
+.piePaginaText {
     font-family: 'Ringbearer', sans-serif;
-    color:#f0f0f0;
-    text-align:center;
+    color: #f0f0f0;
+    text-align: center;
     text-shadow: 1px 2px black;
     font-size: 15px;
 
 }
-   
+
 /* Animación de rebote */
 @keyframes bounce {
     0% {
         transform: translateY(-100%);
         animation-timing-function: ease-in;
     }
+
     50% {
         transform: translateY(20%);
         animation-timing-function: ease-out;
     }
+
     100% {
         transform: translateY(0);
         animation-timing-function: ease-in;
@@ -865,12 +1003,17 @@ a:hover{
 /* Animación para el efecto de aparecer de abajo hacia arriba */
 @keyframes slideUp {
     0% {
-        transform: translateY(100px); /* Inicia fuera de la vista */
-        opacity: 0;                  /* Totalmente invisible */
+        transform: translateY(100px);
+        /* Inicia fuera de la vista */
+        opacity: 0;
+        /* Totalmente invisible */
     }
+
     100% {
-        transform: translateY(0);    /* Vuelve a su posición normal */
-        opacity: 1;                  /* Aparece completamente */
+        transform: translateY(0);
+        /* Vuelve a su posición normal */
+        opacity: 1;
+        /* Aparece completamente */
     }
 }
 
@@ -881,6 +1024,7 @@ a:hover{
         transform: translateY(100px);
         filter: blur(33px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -894,6 +1038,7 @@ a:hover{
         opacity: 0;
         transform: translateY(-100%);
     }
+
     100% {
         opacity: 1;
         transform: translateY(0);
@@ -907,14 +1052,14 @@ a:hover{
 p,
 h3,
 .NuestrosPadres,
-.contenedorVestimenta, 
+.contenedorVestimenta,
 h2,
 #contador,
 .itinerario,
 .sparky,
 .ceremonia,
 .sliderCarrusel,
-.dots-memories{
+.dots-memories {
     opacity: 0;
     transform: translateY(100px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
@@ -933,7 +1078,7 @@ h2.visible,
 .sparky.visible,
 .ceremonia.visible,
 .sliderCarrusel.visible,
-.dots-memories.visible{
+.dots-memories.visible {
     opacity: 1;
     transform: translateY(0);
 }
@@ -947,7 +1092,7 @@ h2.visible,
 .fecha.visible,
 p.visible,
 h3.visible,
-.itinerario.visible{
+.itinerario.visible {
     animation: slideUp 3s ease-out forwards;
 }
 
@@ -958,7 +1103,7 @@ h2.visible,
 .sparky.visible,
 .ceremonia.visible,
 .sliderCarrusel.visible,
-.dots-memories.visible{
+.dots-memories.visible {
     animation: animateBlur 3s ease-out forwards;
 }
 
@@ -969,7 +1114,7 @@ h2.visible,
 #btn-no,
 #submit,
 #hospedaje,
-#app__boton{
+#app__boton {
     opacity: 0;
     transform: translateY(-100%);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
@@ -981,7 +1126,7 @@ h2.visible,
 #btn-no.visible,
 #submit.visible,
 #hospedaje.visible,
-#app__boton.visible{
+#app__boton.visible {
     opacity: 1;
     transform: translateY(0);
     animation: bounce 3s ease-out forwards;
@@ -992,138 +1137,146 @@ h2.visible,
 
 /* Contenedor principal: Simula el fondo de pergamino */
 .itinerario-tierra-media {
-  font-family: 'Cormorant Garamond', serif;
-  background-color: #faf4e2; /* Tono beige/pergamino claro */
-  color: rgb(109, 89, 64); /* Verde oscuro estilo bosque élfico */
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 40px 20px;
-  border: 2px solid rgb(109, 89, 64); /* Borde dorado apagado */
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  /* Patrón sutil para dar textura (opcional) */
-  background-image: radial-gradient(#e5d9b5 1px, transparent 1px);
-  background-size: 20px 20px;
+    font-family: 'Cormorant Garamond', serif;
+    background-color: #faf4e2;
+    /* Tono beige/pergamino claro */
+    color: rgb(109, 89, 64);
+    /* Verde oscuro estilo bosque élfico */
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    border: 2px solid rgb(109, 89, 64);
+    /* Borde dorado apagado */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    /* Patrón sutil para dar textura (opcional) */
+    background-image: radial-gradient(#e5d9b5 1px, transparent 1px);
+    background-size: 20px 20px;
 }
 
 /* Estilos del encabezado principal */
 .encabezado {
-  text-align: center;
-  margin-bottom: 40px;
+    text-align: center;
+    margin-bottom: 40px;
 }
 
 .encabezado h1 {
-  font-family: 'Cinzel', serif; /* Fuente principal similar a la del anillo */
-  font-size: 2.5rem;
-  color: rgb(109, 89, 64);
-  margin: 0;
-  letter-spacing: 2px;
+    font-family: 'Cinzel', serif;
+    /* Fuente principal similar a la del anillo */
+    font-size: 2.5rem;
+    color: rgb(109, 89, 64);
+    margin: 0;
+    letter-spacing: 2px;
 }
 
 .encabezado p {
-  font-size: 1.2rem;
-  font-style: italic;
-  color: #b89947;
-  margin-top: 5px;
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #b89947;
+    margin-top: 5px;
 }
 
 /* Contenedor de la línea de tiempo vertical */
 .linea-tiempo {
-  position: relative;
-  padding: 20px 0;
+    position: relative;
+    padding: 20px 0;
 }
 
 /* La línea dorada central que conecta los eventos */
 .linea-tiempo::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 50%; /* Centra la línea */
-  width: 2px;
-  background-color: #b89947; /* Color dorado */
-  transform: translateX(-50%);
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    /* Centra la línea */
+    width: 2px;
+    background-color: #b89947;
+    /* Color dorado */
+    transform: translateX(-50%);
 }
 
 /* Cada bloque de evento (hora + tarjeta) */
 .evento {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 30px;
-  position: relative;
-  width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    position: relative;
+    width: 100%;
 }
 
 /* Estilo para las etiquetas de las horas */
 .hora {
-  font-family: 'Cinzel', serif;
-  font-weight: 700;
-  color: #b89947;
-  width: 40%;
-  text-align: right;
-  padding-right: 30px;
-  font-size: 1.2rem;
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    color: #b89947;
+    width: 40%;
+    text-align: right;
+    padding-right: 30px;
+    font-size: 1.2rem;
 }
 
 /* Las tarjetas emulan los estandartes del diseño original */
 .tarjeta {
-  width: 40%;
-  padding-left: 30px;
-  text-align: left;
-  position: relative;
+    width: 40%;
+    padding-left: 30px;
+    text-align: left;
+    position: relative;
 }
 
 /* Punto decorativo en el centro de la línea de tiempo */
 .tarjeta::before {
-  content: '✦'; /* Símbolo de estrella para dar un toque místico */
-  position: absolute;
-  left: -12px; /* Ajuste para centrar sobre la línea */
-  top: 50%;
-  transform: translateY(-50%);
-  color: #4b6445;
-  font-size: 1.2rem;
-  background-color: #faf4e2; /* Fondo igual al pergamino para tapar la línea */
-  padding: 5px;
+    content: '✦';
+    /* Símbolo de estrella para dar un toque místico */
+    position: absolute;
+    left: -12px;
+    /* Ajuste para centrar sobre la línea */
+    top: 50%;
+    transform: translateY(-50%);
+    color: #4b6445;
+    font-size: 1.2rem;
+    background-color: #faf4e2;
+    /* Fondo igual al pergamino para tapar la línea */
+    padding: 5px;
 }
 
 .tarjeta h3 {
-  font-family: 'Cinzel', serif;
-  margin: 0;
-  font-size: 1.4rem;
-  color: rgb(109, 89, 64);
-  /* Subrayado sutil */
-  border-bottom: 1px solid #b89947;
-  display: inline-block;
-  padding-bottom: 5px;
+    font-family: 'Cinzel', serif;
+    margin: 0;
+    font-size: 1rem;
+    color: rgb(109, 89, 64);
+    /* Subrayado sutil */
+    border-bottom: 1px solid #b89947;
+    display: inline-block;
+    padding-bottom: 5px;
 }
 
 .tarjeta p {
-  margin: 5px 0 0 0;
-  font-size: 1.1rem;
-  font-style: italic;
-  color: rgb(109, 89, 64);
+    margin: 5px 0 0 0;
+    font-size: 1.1rem;
+    font-style: italic;
+    color: rgb(109, 89, 64);
 }
 
 /* Para alternar los lados y darle dinamismo (Opcional) */
 .evento:nth-child(even) {
-  flex-direction: row-reverse;
+    flex-direction: row-reverse;
 }
 
 .evento:nth-child(even) .hora {
-  text-align: left;
-  padding-right: 0;
-  padding-left: 30px;
+    text-align: left;
+    padding-right: 0;
+    padding-left: 30px;
 }
 
 .evento:nth-child(even) .tarjeta {
-  text-align: right;
-  padding-left: 0;
-  padding-right: 30px;
+    text-align: right;
+    padding-left: 0;
+    padding-right: 30px;
 }
 
 .evento:nth-child(even) .tarjeta::before {
-  left: auto;
-  right: -12px;
+    left: auto;
+    right: -12px;
 }
-
