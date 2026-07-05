@@ -478,10 +478,6 @@ span {
     transform: scale(1.03);
 }
 
-/* ==========================================
-   DISEÑO RESPONSIVO (Adaptación a pantallas)
-   ========================================== */
-
 /* Tablets y pantallas medianas: Pasamos a 2 columnas */
 @media (max-width: 800px) {
     .galeria-pinterest {
