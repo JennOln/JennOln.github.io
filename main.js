@@ -3,10 +3,6 @@ const playPauseBtn = document.getElementById('playPauseBtn');
 const playIcon = playPauseBtn.querySelector('i');
 const progressBar = document.getElementById('progressBar');
 
-audio.addEventListener('loadedmetadata', () => {
-    audio.currentTime = 155; 
-});
-
 // Controlar Play/Pause
 playPauseBtn.addEventListener('click', () => {
     if (audio.paused) {
