@@ -753,6 +753,7 @@ span {
 
 
 #mesaRegalos__boton,
+#mesaRegalosA__boton,
 #app__boton {
     text-align: center;
     padding-top: 15px;
@@ -770,7 +771,8 @@ span {
 
 #mapa:hover,
 #app__boton:hover,
-#mesaRegalos__boton:hover {
+#mesaRegalos__boton:hover,
+#mesaRegalosA__boton:hover {
     background-color: rgb(85, 102, 38);
     color: white;
     border-color: rgb(85, 102, 38);
@@ -1105,6 +1107,7 @@ h2.visible,
 
 /* Aplica la animación a los botones e imagenes*/
 #mesaRegalos__boton,
+#mesaRegalosA__boton,
 #mapa,
 #btn-si,
 #btn-no,
@@ -1116,6 +1119,7 @@ h2.visible,
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
+#mesaRegalos__boton.visible,
 #mesaRegalos__boton.visible,
 #mapa.visible,
 #btn-si.visible,
