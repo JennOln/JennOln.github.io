@@ -1276,3 +1276,8 @@ h2.visible,
     left: auto;
     right: -12px;
 }
+
+.texto-importante {
+    font-weight: bold; 
+    font-size: 1.5rem;
+}
