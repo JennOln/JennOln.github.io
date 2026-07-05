@@ -804,15 +804,15 @@ span {
 
 #nombre,
 #apellido {
-    height: 35px;
+    height: 50px;
     width: 270px;
     margin: 3px;
     text-align: center;
     font-weight: 650;
     font-family: "Fleur De Leah", serif;
-    font-size: 300px;
+    font-size: 800px;
     font-style: normal;
-    font-size: 15px;
+    font-size: 35px;
     border-radius: 10px;
 }
 
