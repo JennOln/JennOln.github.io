@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }, { threshold: 0.1 });
 
-    document.querySelectorAll('.titulo, .savethedate, .fecha, p, h3, .NuestrosPadres, .contenedorVestimenta, h2, #mesaRegalos__boton, #mesaRegalosA__boton, #mapa, #btn-si, #btn-no, #submit, #hospedaje, #app__boton, #contador, .itinerario, .sparky, .ceremonia, .sliderCarrusel, .dots-memories').forEach(elemento => {
+    document.querySelectorAll('.titulo, .savethedate, .fecha, p, h3, h4, .NuestrosPadres, .contenedorVestimenta, h2, #leaf-img, #mesaRegalos__boton, #mesaRegalosA__boton, #mapa, #btn-si, #btn-no, #submit, #hospedaje, #app__boton, #contador, .itinerario, .sparky, .ceremonia, .sliderCarrusel, .dots-memories').forEach(elemento => {
         observer.observe(elemento);
     });
 

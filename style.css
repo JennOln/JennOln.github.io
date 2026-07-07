@@ -89,7 +89,7 @@ body {
 /* Estilos para el botón de play/pause en la parte inferior */
 .play-pause {
     background: none;
-    border: 2px solid rgb(13, 100, 64);
+    border: 2px solid #546A50;
     /* El borde del círculo */
     border-radius: 50%;
     /* Hace que el borde sea circular */
@@ -99,7 +99,7 @@ body {
     /* Tamaño del círculo */
     font-size: 25px;
     margin-top: 10px;
-    color: rgb(13, 100, 64);
+    color: #546A50;
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -110,15 +110,15 @@ body {
 
 /* Hover para el botón */
 .play-pause:hover {
-    color: rgb(13, 100, 64);
-    border-color: rgb(13, 100, 64);
+    color: #546A50;
+    border-color: #546A50;
     /* Cambia el borde al hacer hover */
 }
 
 
 /** Fuentes **/
 .titulo {
-    color: rgb(13, 100, 64);
+    color: #546A50;
     text-shadow: 3px 3px rgb(44, 37, 28);
 }
 
@@ -132,13 +132,13 @@ body {
 
 h1 {
     font-family: "The Nautigal", serif;
-    font-size: 7rem;
+    font-size: 6rem;
 }
 
 #nuestraBoda {
     margin-top: 450px;
     /* Regresar a 250 si no funciona */
-    color: beige;
+    color: ivory;
 }
 
 #subtitulo {
@@ -193,6 +193,11 @@ h4 {
     font-family: "Fleur De Leah", serif;
     color: rgb(13, 100, 64);
     text-align: center;
+     justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transform: translateY(100px);
+    opacity: 0;
 }
 
 /** Propiedades de FOTOS  **/
@@ -1050,9 +1055,11 @@ a:hover {
 .fecha,
 p,
 h3,
+h4,
 .NuestrosPadres,
 .contenedorVestimenta,
 h2,
+#leaf-img,
 #contador,
 .itinerario,
 .sparky,
@@ -1073,6 +1080,7 @@ h4.visible,
 .NuestrosPadres.visible,
 .contenedorVestimenta.visible,
 h2.visible,
+#leaf-img, 
 #contador.visible,
 .itinerario.visible,
 .sparky.visible,
@@ -1100,6 +1108,7 @@ h4.visible,
 .NuestrosPadres.visible,
 .contenedorVestimenta.visible,
 h2.visible,
+#leaf-img,
 #contador.visible,
 .sparky.visible,
 .ceremonia.visible,
