@@ -149,7 +149,6 @@ h1 {
 h2 {
     font-family: 'Ringbearer', sans-serif;
     font-size: 2.3rem;
-
 }
 
 p {
@@ -168,6 +167,8 @@ p {
     /* Comienza fuera de la vista */
     opacity: 0;
     /* Invisible inicialmente */
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 h3 {
@@ -188,10 +189,10 @@ h3 {
 }
 
 h4 {
-    font-size: 2rem;
-    font-family: "The Nautigal", serif;
-    text-align: center;
+    font-size: 30px;
+    font-family: "Fleur De Leah", serif;
     color: rgb(13, 100, 64);
+    text-align: center;
 }
 
 /** Propiedades de FOTOS  **/
@@ -582,11 +583,11 @@ span {
 }
 
 .color3 {
-    background-color: #9e6d23;
+    background-color: #86632d;
 }
 
 .color4 {
-    background-color: #ba85cfee;
+    background-color: #df923bee;
 }
 
 .color5 {
@@ -594,7 +595,7 @@ span {
 }
 
 .color6 {
-    background-color: #07193b;
+    background-color: #113577;
 }
 
 /*DAMAS*/
@@ -1068,6 +1069,7 @@ h2,
 .fecha.visible,
 p.visible,
 h3.visible,
+h4.visible,
 .NuestrosPadres.visible,
 .contenedorVestimenta.visible,
 h2.visible,
@@ -1090,6 +1092,7 @@ h2.visible,
 .fecha.visible,
 p.visible,
 h3.visible,
+h4.visible,
 .itinerario.visible {
     animation: slideUp 3s ease-out forwards;
 }
