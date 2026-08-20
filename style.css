@@ -195,7 +195,7 @@ h4 {
     font-family: "Fleur De Leah", serif;
     color: rgb(13, 100, 64);
     text-align: center;
-     justify-content: center;
+    justify-content: center;
     align-items: center;
     overflow: hidden;
     transform: translateY(100px);
@@ -211,7 +211,7 @@ h4 {
 }
 
 .titulo {
-    margin-top: 500px;
+    margin-top: 400px;
     /* Elimina cualquier margen superior si lo hay */
 }
 
