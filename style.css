@@ -118,8 +118,9 @@ body {
 
 /** Fuentes **/
 .titulo {
-    color: #546A50;
-    text-shadow: 3px 3px rgb(44, 37, 28);
+    color: ivory;
+    text-shadow: 2px 2px rgb(34, 34, 34);
+    
 }
 
 #frase {
@@ -132,13 +133,14 @@ body {
 
 h1 {
     font-family: "The Nautigal", serif;
-    font-size: 6rem;
+    font-size: 4.5rem;
 }
 
 #nuestraBoda {
-    margin-top: 450px;
     /* Regresar a 250 si no funciona */
     color: ivory;
+    text-shadow: 2px 2px rgb(34, 34, 34);
+
 }
 
 #subtitulo {
@@ -209,7 +211,7 @@ h4 {
 }
 
 .titulo {
-    margin-top: -100px;
+    margin-top: 500px;
     /* Elimina cualquier margen superior si lo hay */
 }
 
@@ -588,7 +590,7 @@ span {
 }
 
 .color3 {
-    background-color: #6c5f25;
+    background-color: #c2a500;
 }
 
 .color4 {
